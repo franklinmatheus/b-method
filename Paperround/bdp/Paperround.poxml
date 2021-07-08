@@ -1,0 +1,3009 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos c="1" s="14" l="18"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:3:1:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="16" s="6" l="18"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:3:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos c="16" s="6" l="18"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:3:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="32" s="9" l="18"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:3:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos c="32" s="9" l="18"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>addpaper</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="22"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="22"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="22"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="22"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="40" s="1" l="22"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="27" s="4" l="22"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="32" s="6" l="22"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="42" s="2" l="22"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:3:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="14" s="6" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="14" s="6" l="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:3:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="24" s="6" l="23"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="34" s="1" l="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:3:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="35" s="2" l="23"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>addmagazine</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="34"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="55" s="2" l="34"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="29" s="1" l="34"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="27" s="1" l="34"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="34"/>
+</Attr>
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="46" s="2" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="49" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="50" s="2" l="34"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="58" s="4" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="63" s="6" l="34"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:3:1:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="14" s="9" l="35"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="14" s="9" l="35"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:3:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="27" s="9" l="35"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="40" s="1" l="35"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:3:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="41" s="2" l="35"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>remove</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="43"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="43"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="43"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="43"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="54" s="2" l="43"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="29" s="1" l="43"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="27" s="1" l="43"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="43"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="46" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="48" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="49" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="57" s="4" l="43"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="69" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="62" s="6" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="71" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="72" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="14" s="6" l="44"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="14" s="6" l="44"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="24" s="6" l="44"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="33" s="1" l="44"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="34" s="2" l="44"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="41" s="9" l="44"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="41" s="9" l="44"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:2:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="54" s="9" l="44"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="66" s="1" l="44"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:3:1:2:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="67" s="2" l="44"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>allmags</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="28" s="2" l="49"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="14" s="1" l="49"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="13" s="1" l="49"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="15" s="4" l="49"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="20" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="49"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="36" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:2:1:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="14" s="9" l="50"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:2:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="14" s="9" l="50"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>removehouse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="30" s="2" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="27" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:2" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="33" s="9" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="63" s="2" l="66"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="46" s="1" l="66"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="45" s="1" l="66"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="47" s="4" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="52" s="9" l="66"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="66" s="4" l="66"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="78" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="71" s="6" l="66"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="80" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="81" s="2" l="66"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:3:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="14" s="6" l="67"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="14" s="6" l="67"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:3:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="24" s="6" l="67"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="33" s="1" l="67"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:3:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="34" s="2" l="67"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="10"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=" initialTag="((2 * card(magazines)) &lt;= card(papers))">
+<Attr>
+<Pos c="23" s="2" l="15"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="6" s="1" l="15"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="5" s="1" l="15"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="7" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="26" s="4" l="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:" initialTag="papers : POW( ((1) .. (163)))">
+<Attr>
+<Pos c="18" s="2" l="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="11" s="6" l="10"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="22" s="2" l="10"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="21" s="1" l="10"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="24" s="3" l="10"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:" initialTag="magazines : POW( papers)">
+<Attr>
+<Pos c="15" s="2" l="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="11"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:2:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="11"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((magazines) : (FIN(magazines)))">
+<Attr>
+<Pos c="15" s="1" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="5" s="9" l="12"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="17" s="3" l="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:3:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="21" s="9" l="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((papers) : (FIN(papers)))">
+<Attr>
+<Pos c="12" s="1" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="5" s="6" l="13"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN" typref="949986794">
+<Attr>
+<Pos c="14" s="3" l="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:4:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="13"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;=" initialTag="(card(papers) &lt;= 60)">
+<Attr>
+<Pos c="18" s="2" l="14"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="5" s="4" l="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="10" s="6" l="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:5:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="21" s="2" l="14"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="12" s="9" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:2:1:6:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="31" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_addpaper</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="22"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="22"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="22"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="22"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="32" s="6" l="22"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="32" s="6" l="22"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_addpaper</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="22"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="22"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="22"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="22"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="22"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="40" s="1" l="22"/>
+</Attr>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="27" s="4" l="22"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="32" s="6" l="22"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:1:2:1:2:2" typref="2701647786" value="60">
+<Attr>
+<Pos c="42" s="2" l="22"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_addmagazine</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="34"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="46" s="2" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="49" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="50" s="2" l="34"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Unary_Exp op="FIN">
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="46" s="2" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="49" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="50" s="2" l="34"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="63" s="6" l="34"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="63" s="6" l="34"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_addmagazine</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="34"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="55" s="2" l="34"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="29" s="1" l="34"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="27" s="1" l="34"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="34"/>
+</Attr>
+<Binary_Exp op="\/" typref="3603043417">
+<Attr>
+<Pos c="46" s="2" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="49" s="1" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="50" s="2" l="34"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="58" s="4" l="34"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:2:2:1:2:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="63" s="6" l="34"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_remove</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="43"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="43"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="43"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="43"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="46" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="48" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="49" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Unary_Exp op="FIN">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="46" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="48" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="49" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="69" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="62" s="6" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="71" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="72" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Unary_Exp op="FIN">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="69" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="62" s="6" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="71" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="72" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_remove</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="43"/>
+</Attr>
+</Id>
+<Binary_Exp op=".." typref="3603043417">
+<Attr>
+<Pos c="19" s="2" l="43"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:1" typref="2701647786" value="1">
+<Attr>
+<Pos c="18" s="1" l="43"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:1:2:2" typref="2701647786" value="163">
+<Attr>
+<Pos c="21" s="3" l="43"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="54" s="2" l="43"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="29" s="1" l="43"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="27" s="1" l="43"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="43"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="46" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="36" s="9" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="48" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:1:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="49" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="57" s="4" l="43"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="69" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="62" s="6" l="43"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="71" s="1" l="43"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:3:2:1:2:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="72" s="2" l="43"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_allmags</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="20" s="6" l="49"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="20" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="36" s="6" l="49"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="36" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_allmags</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="28" s="2" l="49"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="14" s="1" l="49"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="13" s="1" l="49"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="15" s="4" l="49"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="20" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="31" s="4" l="49"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:4:1:1:2:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="36" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_removehouse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="30" s="2" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="27" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:2" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="33" s="9" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="52" s="9" l="66"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="52" s="9" l="66"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Exp_Comparison op=":">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="78" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="71" s="6" l="66"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="80" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="81" s="2" l="66"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Unary_Exp op="FIN">
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="78" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="71" s="6" l="66"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="80" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="81" s="2" l="66"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_removehouse</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="13" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:1:2" typref="3603043417" value="papers">
+<Attr>
+<Pos c="18" s="6" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="30" s="2" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="27" s="2" l="66"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:2:2" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="33" s="9" l="66"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos c="63" s="2" l="66"/>
+</Attr>
+<Binary_Exp op="*" typref="2701647786">
+<Attr>
+<Pos c="46" s="1" l="66"/>
+</Attr>
+<Integer_Literal tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:1" typref="2701647786" value="2">
+<Attr>
+<Pos c="45" s="1" l="66"/>
+</Attr>
+</Integer_Literal>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="47" s="4" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:1:2:1" typref="3603043417" value="magazines">
+<Attr>
+<Pos c="52" s="9" l="66"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Attr>
+<Pos c="66" s="4" l="66"/>
+</Attr>
+<Binary_Exp op="-" typref="3603043417">
+<Attr>
+<Pos c="78" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:1" typref="3603043417" value="papers">
+<Attr>
+<Pos c="71" s="6" l="66"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="3603043417">
+<Attr>
+<Pos c="80" s="1" l="66"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:4:5:2:1:3:2:1:2:1" typref="2701647786" value="hh">
+<Attr>
+<Pos c="81" s="2" l="66"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:5:1:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:5:2:1" value="INTEGER"/>
+</Type>
+<Type id="949986794">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:5:3:1:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\Franklin\Desktop\Formal methods\Paperround\bdp\Paperround.bxml:1:5:4:1:1"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

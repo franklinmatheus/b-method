@@ -1,0 +1,42 @@
+REFINEMENT        PortR
+
+REFINES           Port
+
+INCLUDES          List(SHIP), Map(SHIP, QUAY)
+
+VARIABLES         num
+
+INVARIANT         num : NAT & num = size(waiting) 
+                  & waiting = list & docked~ = fun 
+
+INITIALISATION    num := 0
+
+OPERATIONS
+
+arrive(ss) = 
+    BEGIN 
+        add(ss); num := num + 1 
+    END;
+
+dock(qq) = 
+  	BEGIN
+    	VAR sh IN 
+    	    sh <-- take; insert(sh,qq) 
+      END;
+    	num := num - 1
+  	END;
+
+qq <-- leave(ss) = 
+  	BEGIN 
+  	    qq <-- query(ss); remove(ss) 
+  	END;
+
+nn <-- numberwaiting = nn := num;
+
+jumpqueue(ss,qq) =
+    BEGIN
+        insert(ss,qq)
+    END
+
+END
+

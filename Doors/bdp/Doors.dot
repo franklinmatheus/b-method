@@ -1,0 +1,8 @@
+digraph {
+Doors [ label=" Doors " shape= box ]
+Keys [ label=" Keys " shape= box ]
+Locks [ label=" Locks " shape= box ]
+RobustLocks [ label=" RobustLocks " shape= box ]
+Safes [ label=" Safes " shape= box ]
+
+}

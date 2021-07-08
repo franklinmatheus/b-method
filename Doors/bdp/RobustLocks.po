@@ -1,0 +1,50 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustlock.4,(_f(17) & _f(12) & _f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustlock.3,(_f(17) & _f(12) & _f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustlock.2,(_f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustlock.1,(_f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustunlock.4,(_f(17) & _f(12) & _f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustunlock.3,(_f(17) & _f(12) & _f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustunlock.2,(_f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustunlock.1,(_f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustclose.4,(_f(15) & _f(12) & _f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustclose.3,(_f(15) & _f(12) & _f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustclose.2,(_f(19) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustclose.1,(_f(19) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustopen.4,(_f(13) & _f(12) & _f(19) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustopen.3,(_f(13) & _f(12) & _f(19) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustopen.2,(_f(19) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(12) & WellDefinedness_robustopen.1,(_f(19) => _f(20))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{REPORT}): FIN(NATURAL*{REPORT}) & not(((1..2)*{REPORT}) = {});
+DOOR: FIN(INTEGER) & not(DOOR = {}) & ((1..2)*{POSITION}): FIN(NATURAL*{POSITION}) & not(((1..2)*{POSITION}) = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {});
+position : DOOR +-> ((1..2)*{POSITION}) & dom(position) = DOOR & ((position) : (((DOOR) --> (((1..2)*{POSITION}))))) & status : DOOR +-> ((1..2)*{STATUS}) & dom(status) = DOOR & ((status) : (((DOOR) --> (((1..2)*{STATUS}))))) & ((position)~ )[({(1|->POSITION)})] : POW( ((status)~ )[({(2|->STATUS)})]);
+(DOOR * ({(2|->POSITION)})) : DOOR +-> ((1..2)*{POSITION});
+dom((DOOR * ({(2|->POSITION)}))) = DOOR;
+(((DOOR * ({(2|->POSITION)}))) : (((DOOR) --> (((1..2)*{POSITION})))));
+(DOOR * ({(1|->STATUS)})) : DOOR +-> ((1..2)*{STATUS});
+dom((DOOR * ({(1|->STATUS)}))) = DOOR;
+(((DOOR * ({(1|->STATUS)}))) : (((DOOR) --> (((1..2)*{STATUS})))));
+(((DOOR * ({(2|->POSITION)})))~ )[({(1|->POSITION)})] : POW( (((DOOR * ({(1|->STATUS)})))~ )[({(2|->STATUS)})]);
+((dd) : (DOOR));
+(((status )(dd)) = ((2|->STATUS)));
+not((((status )(dd)) = ((2|->STATUS))));
+(((position )(dd)) = ((1|->POSITION)));
+not((((position )(dd)) = ((1|->POSITION))));
+(((position )(dd)) = ((2|->POSITION)));
+not((((position )(dd)) = ((2|->POSITION))));
+"Well definedness";
+((dd) : (dom(status)));
+((status) : (((dom(status)) +-> (ran(status)))));
+((dd) : (dom(position)));
+((position) : (((dom(position)) +-> (ran(position)))))
+END
+&
+THEORY EnumerateX IS
+POSITION == {open,closed};
+REPORT == {ok,error};
+STATUS == {locked,unlocked}
+END

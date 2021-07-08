@@ -1,0 +1,3982 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos s="4" l="7" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:1:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="8" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:2:1" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="9" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:3:1" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="10" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:1" typref="2663174166" value="RESPONSE">
+<Attr>
+<Pos s="8" l="11" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:2:1" typref="993364611" value="yes">
+<Attr>
+<Pos s="3" l="11" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:2:2" typref="993364611" value="no">
+<Attr>
+<Pos s="2" l="11" c="22"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos s="14" l="25" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:1:1:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="26" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:1:2:1" typref="3817003670">
+<Attr>
+<Pos s="7" l="26" c="5"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:2:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="26" c="22"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:2:2:1" typref="3817003670">
+<Attr>
+<Pos s="7" l="26" c="22"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="26" c="39"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:3:2:1" typref="3817003670">
+<Attr>
+<Pos s="6" l="26" c="39"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:4:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="26" c="55"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:4:2:1" typref="3817003670">
+<Attr>
+<Pos s="6" l="26" c="55"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:5:1:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="26" c="71"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:4:1:5:2:1" typref="3817003670">
+<Attr>
+<Pos s="5" l="26" c="71"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="31" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="31" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="31" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="31" c="36"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="33"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:2" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="31" c="39"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="31" c="58"/>
+</Attr>
+<Binary_Exp typref="1917930623" op="|-&gt;">
+<Attr>
+<Pos s="3" l="31" c="51"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="48"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:1:2" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="31" c="55"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="31" c="61"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="32" c="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1164432202" op="\/">
+<Attr>
+<Pos s="6" l="32" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:1:2:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="32" c="20"/>
+</Attr>
+</Id>
+<Nary_Exp typref="1164432202" op="{">
+<Attr>
+<Pos s="1" l="32" c="30"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:1:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="32" c="31"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:2:1:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="32" c="38"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2953458238" op="\/">
+<Attr>
+<Pos s="5" l="32" c="38"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:2:2:1:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="32" c="47"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2953458238" op="{">
+<Attr>
+<Pos s="1" l="32" c="56"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:2:2:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="32" c="57"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="32" c="64"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Nary_Exp typref="1841517892" op="{">
+<Attr>
+<Pos s="6" l="32" c="64"/>
+</Attr>
+<Binary_Exp typref="1917930623" op="|-&gt;">
+<Attr>
+<Pos s="3" l="32" c="78"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:3:2:1:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="32" c="75"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:3:1:3:2:1:1:2" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="32" c="82"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>start</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="36" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="36" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="36" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="37" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="37" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="37" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="38" c="18"/>
+</Attr>
+<Binary_Exp typref="1262850395" op="(">
+<Attr>
+<Pos s="0" l="38" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="38" c="14"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="38" c="29"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="38" c="30"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="39" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="39" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="39" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="39" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="40" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:5:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="40" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1164432202" op="ran">
+<Attr>
+<Pos s="3" l="40" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:5:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="40" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:3:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="41" c="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="3897929506" op="\/">
+<Attr>
+<Pos s="7" l="41" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:3:1:2:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="41" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3897929506" op="{">
+<Attr>
+<Pos s="1" l="41" c="32"/>
+</Attr>
+<Binary_Exp typref="1323218593" op="|-&gt;">
+<Attr>
+<Pos s="3" l="41" c="36"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:3:1:2:1:2:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="41" c="33"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:3:1:2:1:2:1:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="41" c="40"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>finished</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="45" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="45" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="45" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="46" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="46" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="46" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="47" c="9"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="47" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="47" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="47" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos s="1" l="48" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="48" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4038871375" op="(">
+<Attr>
+<Pos s="0" l="48" c="19"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="48" c="20"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:1:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="49" c="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="3416225814" op="\/">
+<Attr>
+<Pos s="7" l="49" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="49" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3416225814" op="{">
+<Attr>
+<Pos s="1" l="49" c="32"/>
+</Attr>
+<Binary_Exp typref="3955758253" op="|-&gt;">
+<Attr>
+<Pos s="3" l="49" c="36"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="49" c="33"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1262850395" op="(">
+<Attr>
+<Pos s="0" l="49" c="46"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="49" c="40"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="49" c="47"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:2:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="50" c="12"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="3897929506" op="&lt;&lt;|">
+<Attr>
+<Pos s="7" l="50" c="12"/>
+</Attr>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="50" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:2:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="50" c="24"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:2:2:1:2" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="50" c="32"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>precurrentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="54" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:3:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="54" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:3:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="54" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<If_Sub elseif="no">
+<Attr>
+<Pos s="2" l="56" c="5"/>
+</Attr>
+<Condition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="56" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="56" c="8"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="56" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="56" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:2:1:1:1" typref="993364611" value="resp">
+<Attr>
+<Pos s="4" l="57" c="14"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:2:1:2:1" typref="993364611" value="yes">
+<Attr>
+<Pos s="4" l="57" c="14"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+<Else>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:3:1:1:1" typref="993364611" value="resp">
+<Attr>
+<Pos s="4" l="58" c="14"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:3:1:2:1" typref="993364611" value="no">
+<Attr>
+<Pos s="4" l="58" c="14"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Else>
+</If_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>currentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="63" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="63" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="63" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="63" c="26"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="63" c="23"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="63" c="28"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:2:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="63" c="32"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:1:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="64" c="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1262850395" op="(">
+<Attr>
+<Pos s="2" l="64" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="64" c="16"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4038871375" op="(">
+<Attr>
+<Pos s="0" l="64" c="30"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="64" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>hasreadquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="68" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="68" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="68" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="68" c="26"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="68" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="68" c="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<If_Sub elseif="no">
+<Attr>
+<Pos s="2" l="70" c="5"/>
+</Attr>
+<Condition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="70" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="70" c="8"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="70" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="70" c="22"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:2:1:1:1" typref="993364611" value="resp">
+<Attr>
+<Pos s="4" l="71" c="14"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:2:1:2:1" typref="993364611" value="yes">
+<Attr>
+<Pos s="4" l="71" c="14"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+<Else>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:3:1:1:1" typref="993364611" value="resp">
+<Attr>
+<Pos s="4" l="72" c="14"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:3:1:2:1" typref="993364611" value="no">
+<Attr>
+<Pos s="4" l="72" c="14"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Else>
+</If_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="9" l="16" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((((reading) ; (copyof))) /\ (hasread))) = ({}))" op="=">
+<Attr>
+<Pos s="1" l="22" c="37"/>
+</Attr>
+<Binary_Exp typref="3416225814" op="/\">
+<Attr>
+<Pos s="2" l="22" c="26"/>
+</Attr>
+<Binary_Exp typref="3416225814" op=";">
+<Attr>
+<Pos s="2" l="22" c="16"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="22" c="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:1:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="22" c="18"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:1:2" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="22" c="29"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<EmptySet tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:6:2" typref="3817003670">
+<Attr>
+<Pos s="2" l="22" c="39"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos s="4" l="7" c="1"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:1:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="8" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:2:1" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="9" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:3:1" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="10" c="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:1" typref="2663174166" value="RESPONSE">
+<Attr>
+<Pos s="8" l="11" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:2:1" typref="993364611" value="yes">
+<Attr>
+<Pos s="3" l="11" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:1:4:2:2" typref="993364611" value="no">
+<Attr>
+<Pos s="2" l="11" c="22"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="copies : POW( COPY)" op="&lt;:">
+<Attr>
+<Pos s="2" l="17" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="17" c="5"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="17" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="books : POW( BOOK)" op="&lt;:">
+<Attr>
+<Pos s="2" l="18" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:1" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="18" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="18" c="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((copyof) : (((copies) &gt;-&gt; (books))))" op=":">
+<Attr>
+<Pos s="1" l="19" c="14"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="19" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4126956095" op="&gt;-&gt;">
+<Attr>
+<Pos s="3" l="19" c="23"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:1" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="19" c="16"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:3:2:2" typref="2953458238" value="books">
+<Attr>
+<Pos s="5" l="19" c="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((hasread) : (((READER) &lt;-&gt; (BOOK))))" op=":">
+<Attr>
+<Pos s="1" l="20" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="20" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="1192195949" op="&lt;-&gt;">
+<Attr>
+<Pos s="3" l="20" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="20" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:4:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="20" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((reading) : (((READER) &gt;+&gt; (COPY))))" op=":">
+<Attr>
+<Pos s="1" l="21" c="15"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="21" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="527279969" op="&gt;+&gt;">
+<Attr>
+<Pos s="3" l="21" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:1" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="21" c="17"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:3:1:5:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="21" c="28"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="31" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="31" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="31" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="31" c="36"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="33"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:2" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="31" c="39"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:1:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="31" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="31" c="24"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="31" c="21"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="31" c="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="31" c="36"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="33"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:3:2" typref="1164432202" value="copies">
+<Attr>
+<Pos s="6" l="31" c="39"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="31" c="58"/>
+</Attr>
+<Binary_Exp typref="1917930623" op="|-&gt;">
+<Attr>
+<Pos s="3" l="31" c="51"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:1:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="31" c="48"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:1:2" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="31" c="55"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:1:2:1:4:2" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="31" c="61"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_start</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="36" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="36" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="36" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="37" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="37" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="37" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="38" c="14"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="38" c="18"/>
+</Attr>
+<Binary_Exp typref="1262850395" op="(">
+<Attr>
+<Pos s="0" l="38" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="38" c="14"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="38" c="29"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="38" c="30"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="39" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="39" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="39" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="39" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_start</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="36" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="36" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="36" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="37" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="37" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="37" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="38" c="18"/>
+</Attr>
+<Binary_Exp typref="1262850395" op="(">
+<Attr>
+<Pos s="0" l="38" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="38" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:1:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="38" c="14"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="38" c="21"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="38" c="29"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:3:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="38" c="30"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="39" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="39" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="39" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="39" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos s="2" l="40" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:5:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="40" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1164432202" op="ran">
+<Attr>
+<Pos s="3" l="40" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:2:2:1:5:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="40" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_finished</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="45" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="45" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="45" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="46" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="46" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="46" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="47" c="9"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="47" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="47" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="47" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="48" c="20"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_finished</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="45" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="45" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="45" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="46" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="46" c="7"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:2:2" typref="1164432202" value="COPY">
+<Attr>
+<Pos s="4" l="46" c="12"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="47" c="9"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="47" c="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="47" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:3:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="47" c="14"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos s="1" l="48" c="10"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:1" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="48" c="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="4038871375" op="(">
+<Attr>
+<Pos s="0" l="48" c="19"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="48" c="12"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:2:1:4:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="48" c="20"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:2" typref="4038871375" value="cc">
+<Attr>
+<Pos s="2" l="49" c="47"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="49" c="40"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="49" c="40"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="49" c="40"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:3:3:1:1:2:1:2:1:2:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="49" c="40"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_precurrentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_precurrentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="54" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:3:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="54" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:3:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="54" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="56" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="56" c="8"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="56" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="56" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Unary_Pred op="not">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="56" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="56" c="8"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="56" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:4:4:1:1:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="56" c="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Unary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_currentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="63" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="63" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="63" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_currentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="63" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="63" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="63" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="63" c="26"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="63" c="23"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3596775288" op="dom">
+<Attr>
+<Pos s="3" l="63" c="28"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:3:1:2:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="63" c="32"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="64" c="31"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op=":">
+<Binary_Exp typref="4038871375" op="(">
+<Attr>
+<Pos s="0" l="64" c="30"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:1" typref="3897929506" value="reading">
+<Attr>
+<Pos s="7" l="64" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:2:2" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="64" c="31"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="64" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="64" c="16"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="64" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:5:4:1:2:1:1" typref="1841517892" value="copyof">
+<Attr>
+<Pos s="6" l="64" c="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_hasreadquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="68" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="68" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="68" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_hasreadquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="68" c="12"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="68" c="9"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:1:2" typref="3596775288" value="READER">
+<Attr>
+<Pos s="6" l="68" c="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="68" c="26"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:2:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="68" c="23"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:3:1:2:2" typref="2953458238" value="BOOK">
+<Attr>
+<Pos s="4" l="68" c="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="70" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="70" c="8"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="70" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="70" c="22"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Unary_Pred op="not">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="70" c="11"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:1" typref="1262850395" value="bb">
+<Attr>
+<Pos s="2" l="70" c="8"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2953458238" op="[">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:1" typref="3416225814" value="hasread">
+<Attr>
+<Pos s="7" l="70" c="13"/>
+</Attr>
+</Id>
+<Nary_Exp typref="3596775288" op="{">
+<Attr>
+<Pos s="1" l="70" c="21"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:5:6:4:1:1:1:2:2:1" typref="1421156897" value="rr">
+<Attr>
+<Pos s="2" l="70" c="22"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Unary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="3596775288">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:1:1:1" value="READER"/>
+</Unary_Exp>
+</Type>
+<Type id="2953458238">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:2:1:1" value="BOOK"/>
+</Unary_Exp>
+</Type>
+<Type id="1164432202">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:3:1:1" value="COPY"/>
+</Unary_Exp>
+</Type>
+<Type id="2663174166">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:4:1:1" value="RESPONSE"/>
+</Unary_Exp>
+</Type>
+<Type id="993364611">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:5:1" value="RESPONSE"/>
+</Type>
+<Type id="3416225814">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:6:1:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:6:1:1:2" value="BOOK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3897929506">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:7:1:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:7:1:1:2" value="COPY"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1841517892">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:8:1:1:1" value="COPY"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:8:1:1:2" value="BOOK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4126956095">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:9:1:1:1:1" value="COPY"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:9:1:1:1:2" value="BOOK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1192195949">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:10:1:1:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:10:1:1:1:2" value="BOOK"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="527279969">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:11:1:1:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:11:1:1:1:2" value="COPY"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:12:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4038871375">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:13:1" value="COPY"/>
+</Type>
+<Type id="1262850395">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:14:1" value="BOOK"/>
+</Type>
+<Type id="1917930623">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:15:1:1" value="COPY"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:15:1:2" value="BOOK"/>
+</Binary_Exp>
+</Type>
+<Type id="1421156897">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:16:1" value="READER"/>
+</Type>
+<Type id="1323218593">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:17:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:17:1:2" value="COPY"/>
+</Binary_Exp>
+</Type>
+<Type id="3955758253">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:18:1:1" value="READER"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Reading\bdp\Reading.bxml:1:6:18:1:2" value="BOOK"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

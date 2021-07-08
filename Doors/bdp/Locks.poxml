@@ -1,0 +1,2249 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos l="11" c="1" s="4"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:1" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="11" c="19" s="6"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:2:1" value="locked" typref="2246778642">
+<Attr>
+<Pos l="11" c="29" s="6"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:2:2" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="11" c="37" s="8"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="inprp">
+<Attr>
+<Pos l="7" c="1" s="4"/>
+</Attr>
+<Set>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:1:1:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="7" c="19" s="4"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:1:2:1" value="POSITION" typref="2741815774">
+<Attr>
+<Pos l="7" c="25" s="8"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:1:2:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="7" c="37" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:1:2:2:2" value="closed" typref="955270843">
+<Attr>
+<Pos l="7" c="43" s="6"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="inext">
+<Attr>
+<Pos l="11" c="1" s="9"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="11" c="28" s="1"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:1" initialTag="position" value="position" typref="483395499">
+<Attr>
+<Pos l="11" c="19" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" initialTag="((DOOR) --&gt; (POSITION))" typref="2092253592">
+<Attr>
+<Pos l="11" c="35" s="3"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="11" c="30" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:2:2" value="POSITION" typref="2741815774">
+<Attr>
+<Pos l="11" c="39" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Define>
+<Define name="inv">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos l="13" c="1" s="14"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:4:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="13" c="19" s="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="483395499">
+<Attr>
+<Pos l="13" c="19" s="8"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:4:1:2:1:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="13" c="31" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="13" c="38" s="1"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:4:1:2:1:2:1" value="closed" typref="955270843">
+<Attr>
+<Pos l="13" c="39" s="6"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Attr>
+<Pos l="18" c="1" s="14"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:6:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="18" c="19" s="6"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="1113446292">
+<Attr>
+<Pos l="18" c="19" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:6:1:2:1:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="18" c="29" s="4"/>
+</Attr>
+</Id>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="18" c="36" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:6:1:2:1:2:1" value="locked" typref="2246778642">
+<Attr>
+<Pos l="18" c="37" s="6"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="11" c="1" s="9"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="11" c="28" s="1"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:1" initialTag="position" value="position" typref="483395499">
+<Attr>
+<Pos l="11" c="19" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" initialTag="((DOOR) --&gt; (POSITION))" typref="2092253592">
+<Attr>
+<Pos l="11" c="35" s="3"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="11" c="30" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:3:1:2:2" value="POSITION" typref="2741815774">
+<Attr>
+<Pos l="11" c="39" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>opendoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="23" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="23" c="30" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="2246778642">
+<Attr>
+<Pos l="23" c="25" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="26" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:2" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="23" c="32" s="8"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Operation_Call>
+<Attr>
+<Pos l="24" c="15" s="0"/>
+</Attr>
+<Name>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="opening">
+<Attr>
+<Pos l="24" c="8" s="7"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:2:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="24" c="16" s="2"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="opening">
+<Attr>
+<Pos l="17" endLine="18" c="3" s="7"/>
+</Attr>
+<Input_Parameters>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="17" c="11" s="2"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" c="10" s="1"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="18" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="18" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:3:1:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="18" c="22" s="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:3:1:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="18" c="22" s="8"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:3:1:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="18" c="31" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:3:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="open" typref="955270843">
+<Attr>
+<Pos l="18" c="38" s="4"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>unlockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="28" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="28" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="28" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="28" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:2" value="closed" typref="955270843">
+<Attr>
+<Pos l="28" c="34" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:3:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="29" c="8" s="6"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:3:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="29" c="8" s="6"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:3:1:1:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="29" c="15" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:3:1:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="29" c="22" s="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>lockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="33" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="33" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="33" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:2" value="closed" typref="955270843">
+<Attr>
+<Pos l="33" c="34" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:3:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="34" c="8" s="6"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:3:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="34" c="8" s="6"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:3:1:1:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="34" c="15" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:3:1:2:1" value="locked" typref="2246778642">
+<Attr>
+<Pos l="34" c="22" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>quickclose</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="38" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="38" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="38" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="38" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:2" value="open" typref="955270843">
+<Attr>
+<Pos l="38" c="34" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="39" c="8" s="6"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:1:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="39" c="8" s="6"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:1:1:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="39" c="15" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:1:2:1" value="locked" typref="2246778642">
+<Attr>
+<Pos l="39" c="22" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l="39" c="41" s="0"/>
+</Attr>
+<Name>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="closedoor">
+<Attr>
+<Pos l="39" c="32" s="9"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:2:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="39" c="42" s="2"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="closedoor">
+<Attr>
+<Pos l="20" endLine="21" c="3" s="9"/>
+</Attr>
+<Input_Parameters>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="20" c="13" s="2"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="21" c="10" s="1"/>
+</Attr>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="21" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="21" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:3:1:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="21" c="22" s="8"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:3:1:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="21" c="22" s="8"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:3:1:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="21" c="31" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:3:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="closed" typref="955270843">
+<Attr>
+<Pos l="21" c="38" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="15" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:" initialTag="((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])">
+<Attr>
+<Pos l="16" c="39" s="2"/>
+</Attr>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Unary_Exp op="~" typref="121607861">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="16" c="21" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="2741815774">
+<Attr>
+<Pos l="16" c="31" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:1:2:1" value="open" typref="955270843">
+<Attr>
+<Pos l="16" c="32" s="4"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="1709653955">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Unary_Exp op="~" typref="1996258700">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="16" c="42" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Attr>
+<Pos l="16" c="50" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:2:2:2:1" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="16" c="51" s="8"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos l="11" c="1" s="4"/>
+</Attr>
+<Set>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:1" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="11" c="19" s="6"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:2:1" value="locked" typref="2246778642">
+<Attr>
+<Pos l="11" c="29" s="6"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:3:1:2:2" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="11" c="37" s="8"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((status) : (((DOOR) --&gt; (STATUS))))">
+<Attr>
+<Pos l="15" c="26" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="15" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="--&gt;" typref="1643589999">
+<Attr>
+<Pos l="15" c="33" s="3"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:1" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="15" c="28" s="4"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:5:1:1:2:2" value="STATUS" typref="515940807">
+<Attr>
+<Pos l="15" c="37" s="6"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_opendoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="23" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="26" s="2"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_opendoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="23" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="23" c="30" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="2246778642">
+<Attr>
+<Pos l="23" c="25" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:1" value="status" typref="1113446292">
+<Attr>
+<Pos l="23" c="19" s="6"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="23" c="26" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:2:1:2:2" value="unlocked" typref="2246778642">
+<Attr>
+<Pos l="23" c="32" s="8"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="17" c="11" s="2"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:1:3:1:2:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="24" c="16" s="2"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_unlockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="28" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="28" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="28" s="2"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_unlockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="28" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="28" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="28" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="28" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="28" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="28" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:2:2:1:2:2" value="closed" typref="955270843">
+<Attr>
+<Pos l="28" c="34" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_lockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="33" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="28" s="2"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_lockdoor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="33" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="33" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="33" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="33" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="33" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="33" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:3:2:1:2:2" value="closed" typref="955270843">
+<Attr>
+<Pos l="33" c="34" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_quickclose</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="38" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="38" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="28" s="2"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_quickclose</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="38" c="10" s="1"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="7" s="2"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:1:2" value="DOOR" typref="1709653955">
+<Attr>
+<Pos l="38" c="12" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos l="38" c="32" s="1"/>
+</Attr>
+<Binary_Exp op="(" typref="955270843">
+<Attr>
+<Pos l="38" c="27" s="0"/>
+</Attr>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:1" value="position" typref="483395499">
+<Attr>
+<Pos l="38" c="19" s="8"/>
+</Attr>
+</Id>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:1:2" value="dd" typref="1028334486">
+<Attr>
+<Pos l="38" c="28" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:2:1:2:2" value="open" typref="955270843">
+<Attr>
+<Pos l="38" c="34" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:5:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:1:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="20" c="13" s="2"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:7:4:3:1:2:2:1" value="dd" typref="1028334486">
+<Attr>
+<Pos l="39" c="42" s="2"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="515940807">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:1:1:1" value="STATUS"/>
+</Unary_Exp>
+</Type>
+<Type id="2246778642">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:2:1" value="STATUS"/>
+</Type>
+<Type id="1113446292">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:3:1:1:1" value="DOOR"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:3:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1643589999">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:4:1:1:1:1" value="DOOR"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:4:1:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1709653955">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:5:1:1" value="DOOR"/>
+</Unary_Exp>
+</Type>
+<Type id="121607861">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:6:1:1:1" value="POSITION"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:6:1:1:2" value="DOOR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="483395499">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:7:1:1:1" value="DOOR"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:7:1:1:2" value="POSITION"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2741815774">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:8:1:1" value="POSITION"/>
+</Unary_Exp>
+</Type>
+<Type id="955270843">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:9:1" value="POSITION"/>
+</Type>
+<Type id="1996258700">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:10:1:1:1" value="STATUS"/>
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:10:1:1:2" value="DOOR"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1028334486">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\Locks.bxml:1:8:11:1" value="DOOR"/>
+</Type>
+<Type id="1709653955">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:1:1:1" value="DOOR"/>
+</Unary_Exp>
+</Type>
+<Type id="2741815774">
+<Unary_Exp op="POW">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:2:1:1" value="POSITION"/>
+</Unary_Exp>
+</Type>
+<Type id="955270843">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:3:1" value="POSITION"/>
+</Type>
+<Type id="483395499">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:4:1:1:1" value="DOOR"/>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:4:1:1:2" value="POSITION"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2092253592">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:5:1:1:1:1" value="DOOR"/>
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:5:1:1:1:2" value="POSITION"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1028334486">
+<Id tag="C:/Users/Franklin/Desktop/Formal methods/Doors/bdp\Doors.bxml:1:6:6:1" value="DOOR"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

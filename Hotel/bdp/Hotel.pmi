@@ -1,0 +1,89 @@
+﻿THEORY BalanceX IS
+  Hotel,20,0,0,16,0,0,0;
+  Initialisation,2,0,0,1,0,0,0;
+  WellDefinednessProperties,1,0,0,1,0,0,0;
+  WellDefinedness_Precondition_checkin,2,0,0,2,0,0,0;
+  WellDefinedness_roomquery,2,0,0,2,0,0,0;
+  WellDefinedness_swap,3,0,0,3,0,0,0;
+  WellDefinedness_totalguests,3,0,0,3,0,0,0;
+  WellDefinedness_vacancies,1,0,0,1,0,0,0;
+  checkin,2,0,0,1,0,0,0;
+  checkout,2,0,0,1,0,0,0;
+  swap,2,0,0,1,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  pr;
+  ?;
+  pr;
+  ?;
+  pr;
+  ?;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
+END

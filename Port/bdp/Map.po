@@ -1,0 +1,26 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(5) & _f(10) & WellDefinedness_query.1,(_f(13) => _f(14));
+_f(1) & _f(2) & _f(5) & _f(8) & remove.1,(_f(3) => _f(9));
+_f(1) & _f(2) & _f(5) & _f(6) & insert.1,(_f(3) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+INDEX: FIN(INTEGER) & not(INDEX = {}) & ITEM: FIN(INTEGER) & not(ITEM = {});
+"Invariant is preserved";
+(({}) : (((INDEX) +-> (ITEM))));
+((fun) : (((INDEX) +-> (ITEM))));
+((ss1) : (INDEX)) & ((ss2) : (ITEM));
+((((fun) <+ (({((ss1) |-> (ss2))})))) : (((INDEX) +-> (ITEM))));
+((ss1) : (INDEX));
+((((({ss1})) <<| (fun))) : (((INDEX) +-> (ITEM))));
+((ss1) : (dom(fun)));
+INDEX: FIN(INTEGER) & not(INDEX = {});
+btrue;
+"Well definedness";
+((fun) : (((dom(fun)) +-> (ran(fun)))))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,74 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & _f(21) & WellDefinedness_step.3,(_f(35) => _f(40));
+_f(1) & _f(2) & _f(8) & _f(21) & WellDefinedness_step.2,(_f(35) => _f(37));
+_f(1) & _f(2) & _f(8) & _f(21) & WellDefinedness_step.1,(_f(35) => _f(36));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.6,(_f(35) => _f(41));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.5,(_f(35) => _f(40));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.4,(_f(35) => _f(39));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.3,(_f(35) => _f(36));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.2,(_f(35) => _f(37));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_guestswap.1,(_f(35) => _f(38));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_guestquery.2,(_f(35) => _f(37));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_guestquery.1,(_f(35) => _f(36));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_guestcheckin.2,(_f(12) & _f(34) & _f(33) & _f(32) & _f(35) => _f(37));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_guestcheckin.1,(_f(12) & _f(34) & _f(33) & _f(32) & _f(35) => _f(36));
+_f(1) & _f(2) & _f(8) & _f(21) & step.2,(_f(3) & _f(6) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(21) & step.1,(_f(3) & _f(4) => _f(22));
+_f(1) & _f(2) & _f(8) & _f(18) & guestswap.2,(_f(3) & _f(6) => _f(20));
+_f(1) & _f(2) & _f(8) & _f(18) & guestswap.1,(_f(3) & _f(4) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(12) & guestcheckout.2,(_f(3) & _f(6) => _f(14));
+_f(1) & _f(2) & _f(8) & _f(12) & guestcheckout.1,(_f(3) & _f(4) => _f(13));
+_f(1) & _f(2) & _f(8) & _f(9) & guestcheckin.2,(_f(3) & _f(6) => _f(11));
+_f(1) & _f(2) & _f(8) & _f(9) & guestcheckin.1,(_f(3) & _f(4) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+NAME: FIN(INTEGER) & not(NAME = {}) & ((1..2)*{REPORT}): FIN(NATURAL*{REPORT}) & not(((1..2)*{REPORT}) = {}) & ROOM : POW( (NATURAL-{0})) & ((ROOM) : (FIN(ROOM))) & ((sze) = (5)) & ((card(ROOM)) = (sze)) & ((empty) : (NAME));
+"Invariant is preserved";
+"Check invariant ((guests) : (((ROOM) --> (NAME))))";
+(((ROOM * ({empty}))) : (((ROOM) --> (NAME))));
+"Check invariant ((pguests) : (((ROOM) +-> (NAME))))";
+(({}) : (((ROOM) +-> (NAME))));
+guests : ROOM +-> NAME & dom(guests) = ROOM & ((guests) : (((ROOM) --> (NAME)))) & ((pguests) : (((ROOM) +-> (NAME))));
+((rr) : (ROOM)) & ((nn) : (NAME)) & not(nn = empty) & not(nn : ran(guests)) & (((guests )(rr)) = (empty));
+((((guests) <+ (({((rr) |-> (nn))})))) : (((ROOM) --> (NAME))));
+((((pguests) \/ (({((rr) |-> (nn))})))) : (((ROOM) +-> (NAME))));
+((rr) : (ROOM));
+((((guests) <+ (({((rr) |-> (empty))})))) : (((ROOM) --> (NAME))));
+((((({rr})) <<| (pguests))) : (((ROOM) +-> (NAME))));
+((nn) : (NAME)) & not(nn = empty);
+((nn) : (ran(guests)));
+not(((nn) : (ran(guests))));
+((rr) : (ROOM)) & ((ss) : (ROOM));
+((((guests) <+ (({((rr) |-> ((guests )(ss)))}\/{((ss) |-> ((guests )(rr)))})))) : (((ROOM) --> (NAME))));
+((((pguests) <+ (({((rr) |-> ((pguests )(ss)))}\/{((ss) |-> ((pguests )(rr)))})))) : (((ROOM) +-> (NAME))));
+((rr) : (ROOM)) & (((rr - 1)) : (ROOM)) & ((rr) : (dom(pguests)));
+((((guests) <+ (({(((rr - 1)) |-> ((guests )(rr)))}\/{((rr) |-> (empty))})))) : (((ROOM) --> (NAME))));
+(((((pguests) <+ (({(((rr - 1)) |-> ((pguests )(rr)))}))) - ({((rr) |-> ((pguests )(rr)))}))) : (((ROOM) +-> (NAME))));
+NAME: FIN(INTEGER) & not(NAME = {});
+((card(ROOM)) = (sze));
+((sze) = (5));
+((ROOM) : (FIN(ROOM)));
+ROOM : POW( (NATURAL-{0}));
+guests : ROOM +-> NAME;
+dom(guests) = ROOM;
+((guests) : (((ROOM) --> (NAME))));
+not(nn : ran(guests));
+not(nn = empty);
+((nn) : (NAME));
+"Well definedness";
+((rr) : (dom(guests)));
+((guests) : (((dom(guests)) +-> (ran(guests)))));
+((ss) : (dom(guests)));
+((ss) : (dom(pguests)));
+((pguests) : (((dom(pguests)) +-> (ran(pguests)))));
+((rr) : (dom(pguests)));
+(((rr - 1)) : (ROOM))
+END
+&
+THEORY EnumerateX IS
+REPORT == {present,notpresent}
+END

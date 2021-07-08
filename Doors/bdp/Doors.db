@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\expand_src" old_decomp_dir="C:\Users\Franklin\Desktop\Formal methods\Doors\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Component file list -->
+        <component_file path="C:/Users/Franklin/Desktop/Formal methods/Doors" name="Doors" suffix="mch" user="Franklin">
+            <component name="Doors" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Franklin/Desktop/Formal methods/Doors" name="Keys" suffix="mch" user="Franklin">
+            <component name="Keys" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Franklin/Desktop/Formal methods/Doors" name="Locks" suffix="mch" user="Franklin">
+            <component name="Locks" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Franklin/Desktop/Formal methods/Doors" name="RobustLocks" suffix="mch" user="Franklin">
+            <component name="RobustLocks" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Franklin/Desktop/Formal methods/Doors" name="Safes" suffix="mch" user="Franklin">
+            <component name="Safes" type="specification" />
+        </component_file>
+    </project>
+</db_xml>

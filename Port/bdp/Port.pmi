@@ -1,0 +1,86 @@
+﻿THEORY BalanceX IS
+  Port,19,0,0,11,0,0,0;
+  Initialisation,3,0,0,3,0,0,0;
+  WellDefinedness_Precondition_arrive,1,0,0,0,0,0,0;
+  WellDefinedness_arrive,1,0,0,0,0,0,0;
+  WellDefinedness_dock,2,0,0,1,0,0,0;
+  WellDefinedness_leave,2,0,0,2,0,0,0;
+  WellDefinedness_numberwaiting,1,0,0,0,0,0,0;
+  arrive,2,0,0,1,0,0,0;
+  dock,3,0,0,0,0,0,0;
+  jumpqueue,2,0,0,2,0,0,0;
+  leave,2,0,0,2,0,0,0
+END
+&
+THEORY ProofState IS
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  ?;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  ?;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
+END

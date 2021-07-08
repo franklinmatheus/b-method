@@ -1,0 +1,6 @@
+﻿THEORY User_Pass IS
+Operation(WellDefinednessInvariant) & ff(0) & mp & pp(rt.1 | 60);
+Operation(WellDefinedness_arrive) & ff(0) & mp & pp(rt.1 | 60);
+Operation(WellDefinedness_dock) & ff(0) & mp & pp(rt.1 | 60);
+Operation(dock) & ff(0) & dd(0) & eh(fun$1,_h,Goal) & eh(list$1,_h,Goal) & ss & ah({first(list$1)|->qq} : SHIP +-> QUAY) & mp & dd & ah(docked~<+{first(list$1)|->qq} = docked~\/{first(list$1)|->qq}) & mp & eh(list$1,_h,Goal) & ah({first(waiting)} <: ran(waiting)) & mp & dd & ah(ran(docked)/\{first(waiting)} = {}) & pp(rt.1 | 60) & pp(rt.1 | 60) & pp(rt.1 | 60)
+END 

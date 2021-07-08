@@ -1,0 +1,1531 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos l="9" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(passengers &lt;= (tickets + 45))" op="&lt;=">
+<Attr>
+<Pos l="12" c="16" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:1" value="passengers">
+<Attr>
+<Pos l="12" c="5" s="10"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="12" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:1" value="tickets">
+<Attr>
+<Pos l="12" c="19" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:2" value="45">
+<Attr>
+<Pos l="12" c="29" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos l="14" c="1" s="14"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:3:1:1:1" value="tickets">
+<Attr>
+<Pos l="14" c="16" s="7"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:3:1:1:2" value="passengers">
+<Attr>
+<Pos l="14" c="25" s="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:3:1:2:1" value="0">
+<Attr>
+<Pos l="14" c="16" s="7"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:3:1:2:2" value="0">
+<Attr>
+<Pos l="14" c="25" s="10"/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="9" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(passengers &lt;= (tickets + 45))" op="&lt;=">
+<Attr>
+<Pos l="12" c="16" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:1" value="passengers">
+<Attr>
+<Pos l="12" c="5" s="10"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="12" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:1" value="tickets">
+<Attr>
+<Pos l="12" c="19" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:2" value="45">
+<Attr>
+<Pos l="12" c="29" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>buy</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:1" value="mm">
+<Attr>
+<Pos l="18" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="18" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="18" c="41" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="18" c="36" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:1:1" value="tickets">
+<Attr>
+<Pos l="18" c="28" s="7"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:1:2" value="mm">
+<Attr>
+<Pos l="18" c="38" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="18" c="55" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:2:1" value="passengers">
+<Attr>
+<Pos l="18" c="44" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:2:2" value="1">
+<Attr>
+<Pos l="18" c="57" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:3:1:1:1" value="tickets">
+<Attr>
+<Pos l="19" c="14" s="7"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="19" c="14" s="7"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:3:1:2:1:1" value="tickets">
+<Attr>
+<Pos l="19" c="25" s="7"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:3:1:2:1:2" value="mm">
+<Attr>
+<Pos l="19" c="35" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="9" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(passengers &lt;= (tickets + 45))" op="&lt;=">
+<Attr>
+<Pos l="12" c="16" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:1" value="passengers">
+<Attr>
+<Pos l="12" c="5" s="10"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="12" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:1" value="tickets">
+<Attr>
+<Pos l="12" c="19" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:2" value="45">
+<Attr>
+<Pos l="12" c="29" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>board</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:1" value="nn">
+<Attr>
+<Pos l="23" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="23" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="23" c="44" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="23" c="39" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:1:1" value="passengers">
+<Attr>
+<Pos l="23" c="28" s="10"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:1:2" value="nn">
+<Attr>
+<Pos l="23" c="41" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="23" c="55" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:2:1" value="tickets">
+<Attr>
+<Pos l="23" c="47" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:2:2" value="45">
+<Attr>
+<Pos l="23" c="57" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:3:1:1:1" value="passengers">
+<Attr>
+<Pos l="24" c="14" s="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="24" c="14" s="10"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:3:1:2:1:1" value="passengers">
+<Attr>
+<Pos l="24" c="28" s="10"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:3:1:2:1:2" value="nn">
+<Attr>
+<Pos l="24" c="41" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="9" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(passengers &lt;= (tickets + 45))" op="&lt;=">
+<Attr>
+<Pos l="12" c="16" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:1" value="passengers">
+<Attr>
+<Pos l="12" c="5" s="10"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="12" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:1" value="tickets">
+<Attr>
+<Pos l="12" c="19" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:2" value="45">
+<Attr>
+<Pos l="12" c="29" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>double</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="28" c="26" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="14" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:1" value="2">
+<Attr>
+<Pos l="28" c="13" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:2" value="passengers">
+<Attr>
+<Pos l="28" c="15" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="28" c="39" s="1"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="30" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="28" c="31" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:2" value="45">
+<Attr>
+<Pos l="28" c="41" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="28" c="56" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="47" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="46" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="28" c="48" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="28" c="72" s="1"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="60" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="59" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:1:2" value="passengers">
+<Attr>
+<Pos l="28" c="61" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:2" value="1">
+<Attr>
+<Pos l="28" c="74" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="29" c="14" s="7"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:1:2" value="passengers">
+<Attr>
+<Pos l="29" c="23" s="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="29" c="14" s="7"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:2:1:1" value="2">
+<Attr>
+<Pos l="29" c="37" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="29" c="39" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="29" c="23" s="10"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:2:2:1" value="2">
+<Attr>
+<Pos l="29" c="48" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:2:1:2:2:2" value="passengers">
+<Attr>
+<Pos l="29" c="50" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos l="9" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(passengers &lt;= (tickets + 45))" op="&lt;=">
+<Attr>
+<Pos l="12" c="16" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:1" value="passengers">
+<Attr>
+<Pos l="12" c="5" s="10"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="12" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:1" value="tickets">
+<Attr>
+<Pos l="12" c="19" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:4:2:2" value="45">
+<Attr>
+<Pos l="12" c="29" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((tickets) : (NATURAL))" op=":">
+<Attr>
+<Pos l="9" c="19" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:1" value="tickets">
+<Attr>
+<Pos l="9" c="11" s="7"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="9" c="21" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((passengers) : (NATURAL))" op=":">
+<Attr>
+<Pos l="10" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:1" value="passengers">
+<Attr>
+<Pos l="10" c="5" s="10"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:2:2" value="NATURAL">
+<Attr>
+<Pos l="10" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="(tickets &lt;= (passengers + 1))" op="&lt;=">
+<Attr>
+<Pos l="11" c="13" s="2"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:1" value="tickets">
+<Attr>
+<Pos l="11" c="5" s="7"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="11" c="27" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:1" value="passengers">
+<Attr>
+<Pos l="11" c="16" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:2:1:3:2:2" value="1">
+<Attr>
+<Pos l="11" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_buy</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:1" value="mm">
+<Attr>
+<Pos l="18" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="18" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_buy</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="18" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:1" value="mm">
+<Attr>
+<Pos l="18" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="18" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="18" c="41" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="18" c="36" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:1:1" value="tickets">
+<Attr>
+<Pos l="18" c="28" s="7"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:1:2" value="mm">
+<Attr>
+<Pos l="18" c="38" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="18" c="55" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:2:1" value="passengers">
+<Attr>
+<Pos l="18" c="44" s="10"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:1:2:1:2:2:2" value="1">
+<Attr>
+<Pos l="18" c="57" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_board</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:1" value="nn">
+<Attr>
+<Pos l="23" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="23" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_board</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="23" c="16" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:1" value="nn">
+<Attr>
+<Pos l="23" c="13" s="2"/>
+</Attr>
+</Id>
+<Id typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:1:2" value="NATURAL">
+<Attr>
+<Pos l="23" c="18" s="7"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="23" c="44" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="23" c="39" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:1:1" value="passengers">
+<Attr>
+<Pos l="23" c="28" s="10"/>
+</Attr>
+</Id>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:1:2" value="nn">
+<Attr>
+<Pos l="23" c="41" s="2"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="23" c="55" s="1"/>
+</Attr>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:2:1" value="tickets">
+<Attr>
+<Pos l="23" c="47" s="7"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:2:2:1:2:2:2" value="45">
+<Attr>
+<Pos l="23" c="57" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_double</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="28" c="26" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="14" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:1" value="2">
+<Attr>
+<Pos l="28" c="13" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:2" value="passengers">
+<Attr>
+<Pos l="28" c="15" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="28" c="39" s="1"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="30" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="28" c="31" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:2" value="45">
+<Attr>
+<Pos l="28" c="41" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_double</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="28" c="26" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="14" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:1" value="2">
+<Attr>
+<Pos l="28" c="13" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:1:2" value="passengers">
+<Attr>
+<Pos l="28" c="15" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="28" c="39" s="1"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="30" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="29" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="28" c="31" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:1:2:2" value="45">
+<Attr>
+<Pos l="28" c="41" s="2"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Attr>
+<Pos l="28" c="56" s="2"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="47" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="46" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:1:2" value="tickets">
+<Attr>
+<Pos l="28" c="48" s="7"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos l="28" c="72" s="1"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="*">
+<Attr>
+<Pos l="28" c="60" s="1"/>
+</Attr>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:1:1" value="2">
+<Attr>
+<Pos l="28" c="59" s="1"/>
+</Attr>
+</Integer_Literal>
+<Id typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:1:2" value="passengers">
+<Attr>
+<Pos l="28" c="61" s="10"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:4:3:1:1:2:2:2" value="1">
+<Attr>
+<Pos l="28" c="74" s="1"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="2701647786">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:5:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Franklin\Desktop\Formal methods\Bus\bdp\Bus.bxml:1:5:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

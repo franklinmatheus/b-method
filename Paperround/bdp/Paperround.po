@@ -1,0 +1,77 @@
+THEORY ProofList IS
+_f(1) & _f(13) & WellDefinedness_Precondition_removehouse.1,(_f(41) & _f(43) & _f(42) => _f(28));
+_f(1) & _f(13) & WellDefinedness_Precondition_remove.2,(_f(40) & _f(42) => _f(28));
+_f(1) & _f(13) & WellDefinedness_Precondition_remove.1,(_f(40) & _f(42) => _f(27));
+_f(1) & _f(13) & WellDefinedness_Precondition_addmagazine.1,(_f(41) & _f(42) => _f(23));
+_f(1) & _f(13) & _f(32) & removehouse.4,(_f(2) & _f(9) => _f(29));
+_f(1) & _f(13) & _f(32) & removehouse.3,(_f(2) & _f(17) => _f(28));
+_f(1) & _f(13) & _f(32) & removehouse.2,(_f(2) & _f(5) => _f(33));
+_f(1) & _f(13) & _f(32) & removehouse.1,(_f(2) & _f(3) => _f(25));
+_f(1) & _f(13) & _f(30) & allmags.1,(_f(2) & _f(5) => _f(31));
+_f(1) & _f(13) & _f(24) & remove.5,(_f(2) & _f(9) => _f(29));
+_f(1) & _f(13) & _f(24) & remove.4,(_f(2) & _f(17) => _f(28));
+_f(1) & _f(13) & _f(24) & remove.3,(_f(2) & _f(7) => _f(27));
+_f(1) & _f(13) & _f(24) & remove.2,(_f(2) & _f(5) => _f(26));
+_f(1) & _f(13) & _f(24) & remove.1,(_f(2) & _f(3) => _f(25));
+_f(1) & _f(13) & _f(21) & addmagazine.2,(_f(2) & _f(7) => _f(23));
+_f(1) & _f(13) & _f(21) & addmagazine.1,(_f(2) & _f(5) => _f(22));
+_f(1) & _f(13) & _f(14) & addpaper.5,(_f(2) & _f(11) => _f(20));
+_f(1) & _f(13) & _f(14) & addpaper.4,(_f(2) & _f(9) => _f(19));
+_f(1) & _f(13) & _f(14) & addpaper.3,(_f(2) & _f(17) => _f(18));
+_f(1) & _f(13) & _f(14) & addpaper.2,(_f(2) & _f(5) => _f(16));
+_f(1) & _f(13) & _f(14) & addpaper.1,(_f(2) & _f(3) => _f(15));
+_f(1) & Initialisation.5,(_f(2) & _f(11) => _f(12));
+_f(1) & Initialisation.4,(_f(2) & _f(9) => _f(10));
+_f(1) & Initialisation.3,(_f(2) & _f(7) => _f(8));
+_f(1) & Initialisation.2,(_f(2) & _f(5) => _f(6));
+_f(1) & Initialisation.1,(_f(2) & _f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+"Invariant is preserved";
+"Check invariant papers : POW( ((1) .. (163)))";
+{} : POW( ((1) .. (163)));
+"Check invariant magazines : POW( papers)";
+{} : POW( {});
+"Check invariant ((magazines) : (FIN(magazines)))";
+(({}) : (FIN({})));
+"Check invariant (card(papers) <= 60)";
+(card({}) <= 60);
+"Check invariant ((2 * card(magazines)) <= card(papers))";
+((2 * card({})) <= card({}));
+papers : POW( ((1) .. (163))) & magazines : POW( papers) & ((magazines) : (FIN(magazines))) & ((papers) : (FIN(papers))) & (card(papers) <= 60) & ((2 * card(magazines)) <= card(papers));
+((hh) : (((1) .. (163)))) & (card(papers) +1 <= 60);
+((papers) \/ (({hh}))) : POW( ((1) .. (163)));
+magazines : POW( ((papers) \/ (({hh}))));
+"Check invariant ((papers) : (FIN(papers)))";
+((((papers) \/ (({hh})))) : (FIN(((papers) \/ (({hh}))))));
+(card(((papers) \/ (({hh})))) <= 60);
+((2 * card(magazines)) <= card(((papers) \/ (({hh})))));
+((hh) : (papers)) & ((2 * card(((magazines) \/ (({hh}))))) <= card(papers));
+((magazines) \/ (({hh}))) : POW( papers);
+((((magazines) \/ (({hh})))) : (FIN(((magazines) \/ (({hh}))))));
+((hh) : (((1) .. (163)))) & ((2 * card((magazines - ({hh})))) <= card((papers - ({hh}))));
+(papers - ({hh})) : POW( ((1) .. (163)));
+(magazines - ({hh})) : POW( (papers - ({hh})));
+(((magazines - ({hh}))) : (FIN((magazines - ({hh})))));
+(((papers - ({hh}))) : (FIN((papers - ({hh})))));
+(card((papers - ({hh}))) <= 60);
+((2 * card(papers)) <= card(papers));
+papers : POW( papers);
+((hh) : (papers)) & not(hh : magazines) & ((2 * card(magazines)) <= card((papers - ({hh}))));
+magazines : POW( (papers - ({hh})));
+btrue;
+(card(papers) <= 60);
+((papers) : (FIN(papers)));
+((magazines) : (FIN(magazines)));
+magazines : POW( papers);
+papers : POW( ((1) .. (163)));
+((hh) : (((1) .. (163))));
+((hh) : (papers));
+"Well definedness";
+not(hh : magazines)
+END
+&
+THEORY EnumerateX
+END

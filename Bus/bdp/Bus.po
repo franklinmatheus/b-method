@@ -1,0 +1,51 @@
+THEORY ProofList IS
+_f(1) & _f(9) & _f(17) & double.2,(_f(2) & _f(14) => _f(19));
+_f(1) & _f(9) & _f(17) & double.1,(_f(2) & _f(3) => _f(18));
+_f(1) & _f(9) & _f(13) & board.2,(_f(2) & _f(5) => _f(16));
+_f(1) & _f(9) & _f(13) & board.1,(_f(2) & _f(14) => _f(15));
+_f(1) & _f(9) & _f(10) & buy.2,(_f(2) & _f(7) => _f(12));
+_f(1) & _f(9) & _f(10) & buy.1,(_f(2) & _f(3) => _f(11));
+_f(1) & Initialisation.3,(_f(2) & _f(7) => _f(8));
+_f(1) & Initialisation.2,(_f(2) & _f(5) => _f(6));
+_f(1) & Initialisation.1,(_f(2) & _f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+"Invariant is preserved";
+"Check invariant ((tickets) : (NATURAL))";
+((0) : (NATURAL));
+"Check invariant (tickets <= (passengers + 1))";
+(0 <= (0 + 1));
+"Check invariant (passengers <= (tickets + 45))";
+(0 <= (0 + 45));
+tickets : INTEGER & 0 <= tickets & ((tickets) : (NATURAL)) & passengers : INTEGER & 0 <= passengers & ((passengers) : (NATURAL)) & (tickets <= (passengers + 1)) & (passengers <= (tickets + 45));
+mm : INTEGER & 0 <= mm & ((mm) : (NATURAL)) & ((tickets + mm) <= (passengers + 1));
+(((tickets + mm)) : (NATURAL));
+(passengers <= ((tickets + mm) + 45));
+nn : INTEGER & 0 <= nn & ((nn) : (NATURAL)) & ((passengers + nn) <= (tickets + 45));
+"Check invariant ((passengers) : (NATURAL))";
+(((passengers + nn)) : (NATURAL));
+(tickets <= ((passengers + nn) + 1));
+((2 * passengers) <= ((2 * tickets) + 45)) & ((2 * tickets) <= ((2 * passengers) + 1));
+(((2 * tickets)) : (NATURAL));
+(((2 * passengers)) : (NATURAL));
+btrue;
+(tickets <= (passengers + 1));
+passengers : INTEGER;
+0 <= passengers;
+((passengers) : (NATURAL));
+tickets : INTEGER;
+0 <= tickets;
+((tickets) : (NATURAL));
+mm : INTEGER;
+0 <= mm;
+((mm) : (NATURAL));
+nn : INTEGER;
+0 <= nn;
+((nn) : (NATURAL));
+((2 * passengers) <= ((2 * tickets) + 45))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,25 @@
+﻿THEORY User_Pass IS
+Operation(arrive) & ff(0) & dd(0) & mp & pp(rt.1 | 60);
+Operation(dock) & ff(0) & dd(0) & mp & ar(MyRule.1,Once);
+Operation(dock) & ff(0) & dd(0) & mp & ah(not(first(waiting) : ran(docked))) & mp & ah(first(waiting) : ran(waiting)) & mp & mp & mp;
+Operation(dock) & ff(0) & dd(0) & ah(ran(waiting)/\ran(docked) = {}) & ch & mp & ah(first(waiting) : waiting[{1}]) & pp(rt.1 | 60) & pp(rt.1 | 60) & pp(rt.1 | 60);
+Operation(WellDefinedness_Precondition_arrive) & ff(0) & dd(0) & ah(size(waiting)<=card(SHIP)) & ar(MyRule.3,Once) & dd(0) & ar(MyRule.2,Once);
+Operation(WellDefinedness_arrive) & ff(0) & dd(0) & pp(rt.1 | 60);
+Operation(WellDefinedness_dock) & ff(0) & dd(0) & pp(rt.1 | 60);
+Operation(WellDefinedness_numberwaiting) & ff(0) & dd(0) & pp(rt.1 | 60)
+END &
+THEORY MyRule IS
+    /* Inspired by InFunctionXY.26  */
+    binhyp(f~: s +-> NATURAL-{0})
+    =>
+    (f\|/n)~: s +-> NATURAL-{0}
+    ;
+    band(binhyp(S: FIN(I)),
+    binhyp(size(w)<=card(S))) 
+    => 
+    w: FIN(w) 
+    ;
+    binhyp(w: iseq(S)) 
+    =>
+    size(w)<=card(S) 
+END

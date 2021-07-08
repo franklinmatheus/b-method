@@ -1,0 +1,21 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(5) & _f(6) & closedoor.1,(_f(3) => _f(8));
+_f(1) & _f(2) & _f(5) & _f(6) & opening.1,(_f(3) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+DOOR: FIN(INTEGER) & not(DOOR = {}) & ((1..2)*{POSITION}): FIN(NATURAL*{POSITION}) & not(((1..2)*{POSITION}) = {});
+"Invariant is preserved";
+(((DOOR * ({(2|->POSITION)}))) : (((DOOR) --> (((1..2)*{POSITION})))));
+position : DOOR +-> ((1..2)*{POSITION}) & dom(position) = DOOR & ((position) : (((DOOR) --> (((1..2)*{POSITION})))));
+((dd) : (DOOR));
+((((position) <+ (({((dd) |-> ((1|->POSITION)))})))) : (((DOOR) --> (((1..2)*{POSITION})))));
+((((position) <+ (({((dd) |-> ((2|->POSITION)))})))) : (((DOOR) --> (((1..2)*{POSITION})))));
+DOOR: FIN(INTEGER) & not(DOOR = {})
+END
+&
+THEORY EnumerateX IS
+POSITION == {open,closed}
+END

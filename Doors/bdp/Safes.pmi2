@@ -1,0 +1,125 @@
+﻿THEORY BalanceX IS
+  Safes,30,0,0,22,0,0,0;
+  Initialisation,3,0,0,3,0,0,0;
+  WellDefinedness_Precondition_extract,4,0,0,3,0,0,0;
+  WellDefinedness_Precondition_insert,2,0,0,1,0,0,0;
+  WellDefinedness_Precondition_quickcloseandlock,2,0,0,2,0,0,0;
+  WellDefinedness_Precondition_quicklock,2,0,0,2,0,0,0;
+  WellDefinedness_Precondition_unlock,2,0,0,1,0,0,0;
+  WellDefinedness_quickcloseandlock,2,0,0,2,0,0,0;
+  WellDefinedness_quicklock,2,0,0,2,0,0,0;
+  allocate,2,0,0,2,0,0,0;
+  deallocate,2,0,0,1,0,0,0;
+  extract,1,0,0,0,0,0,0;
+  insert,1,0,0,0,0,0,0;
+  quickcloseandlock,1,0,0,1,0,0,0;
+  quicklock,2,0,0,1,0,0,0;
+  removemaster,1,0,0,1,0,0,0;
+  unlock,1,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),(?;0);
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
+END

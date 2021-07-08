@@ -1,0 +1,4 @@
+digraph {
+Hotel [ label=" Hotel " shape= box ]
+
+}

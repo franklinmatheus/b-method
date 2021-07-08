@@ -1,0 +1,50 @@
+digraph g {
+rankdir=RL;
+    Noderoot [label="&exist;\ntrue", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+    Node1 [label="&and;\ntrue\nrr &#8712; ran(finish) &and; &exist;xx&#183;(xx &#8712; NAT1 &and; xx &#8712;\n dom(finish) &and; finish(xx) = rr)", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node1 -> Noderoot;
+    Node2 [label="&#8712;\ntrue\nrr &#8712; ran(finish)", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node2 -> Node1;
+    Node3 [label="rr|RUNNER5", shape="record", fillcolor="white", style="filled"]
+        Node3 -> Node2;
+    Node4 [label="ran|\{RUNNER3,RUNNER5,RUNNER6,RUNNER7\}", shape="record", fillcolor="white", style="filled"]
+        Node4 -> Node2;
+    Node5 [label="finish|\{(1&#8614;RUNNER5),(2&#8614;RUNNER7),(3&#8614;RUNNER3),(4&#8614;\nRUNNER6)\}", shape="record", fillcolor="white", style="filled"]
+        Node5 -> Node4;
+    Node6 [label="&exist;\ntrue\n&exist;xx&#183;(xx &#8712; NAT1 &and; xx &#8712; dom(finish) &and; fini\nsh(xx) = rr)", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node6 -> Node1;
+    Node7 [label="&and;\ntrue\nxx &#8712; NAT1 &and; xx &#8712; dom(finish) &and; finish(xx\n) = rr", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node7 -> Node6;
+    Node8 [label="&#8712;\ntrue\nxx &#8712; NAT1", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node8 -> Node7;
+    Node9 [label="xx|1", shape="record", fillcolor="white", style="filled"]
+        Node9 -> Node8;
+    Node10 [label="&#8229;|(1 &#8229; 3)", shape="record", fillcolor="white", style="filled"]
+        Node10 -> Node8;
+    Node11 [label="1", shape="record", fillcolor="white", style="filled"]
+        Node11 -> Node10;
+    Node12 [label="MAXINT|3", shape="record", fillcolor="white", style="filled"]
+        Node12 -> Node10;
+    Node13 [label="&#8712;\ntrue\nxx &#8712; dom(finish)", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node13 -> Node7;
+    Node14 [label="xx|1", shape="record", fillcolor="white", style="filled"]
+        Node14 -> Node13;
+    Node15 [label="dom|\{1,2,3,4\}", shape="record", fillcolor="white", style="filled"]
+        Node15 -> Node13;
+    Node16 [label="finish|\{(1&#8614;RUNNER5),(2&#8614;RUNNER7),(3&#8614;RUNNER3),(4&#8614;\nRUNNER6)\}", shape="record", fillcolor="white", style="filled"]
+        Node16 -> Node15;
+    Node17 [label="=\ntrue\nfinish(xx) = rr", shape="rect", fillcolor="olivedrab2", style="filled,rounded"]
+        Node17 -> Node7;
+    Node18 [label="func.applic.|RUNNER5", shape="record", fillcolor="white", style="filled"]
+        Node18 -> Node17;
+    Node19 [label="finish|\{(1&#8614;RUNNER5),(2&#8614;RUNNER7),(3&#8614;RUNNER3),(4&#8614;\nRUNNER6)\}", shape="record", fillcolor="white", style="filled"]
+        Node19 -> Node18;
+    Node20 [label="xx|1", shape="record", fillcolor="white", style="filled"]
+        Node20 -> Node18;
+    Node21 [label="rr|RUNNER5", shape="record", fillcolor="white", style="filled"]
+        Node21 -> Node17;
+    Node22 [label="xx|1", shape="record", fillcolor="white", style="filled"]
+        Node22 -> Node6;
+    Node23 [label="rr|RUNNER5", shape="record", fillcolor="white", style="filled"]
+        Node23 -> Noderoot;
+}

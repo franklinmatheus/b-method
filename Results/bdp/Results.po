@@ -1,0 +1,63 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.7,(_f(14) => _f(29));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.6,(_f(14) => _f(28));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.5,(_f(14) => _f(27));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.4,(_f(14) => _f(26));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.3,(_f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.2,(_f(14) => _f(25));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_remove.1,(_f(14) => _f(24));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_position.2,(_f(14) => _f(25));
+_f(1) & _f(2) & _f(5) & _f(11) & WellDefinedness_position.1,(_f(14) => _f(24));
+_f(1) & _f(2) & _f(5) & _f(10) & WellDefinedness_medals.2,(_f(14) => _f(23));
+_f(1) & _f(2) & _f(5) & _f(10) & WellDefinedness_medals.1,(_f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & WellDefinedness_Precondition_medals.1,(_f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_disqualify.5,(_f(14) => _f(22));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_disqualify.4,(_f(14) => _f(21));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_disqualify.3,(_f(14) => _f(20));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_disqualify.2,(_f(14) => _f(19));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_disqualify.1,(_f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & WellDefinedness_Precondition_disqualify.1,(_f(16) & _f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_query.2,(_f(14) => _f(18));
+_f(1) & _f(2) & _f(5) & _f(8) & WellDefinedness_query.1,(_f(14) => _f(17));
+_f(1) & _f(2) & _f(5) & WellDefinedness_Precondition_query.1,(_f(16) & _f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & _f(6) & WellDefinedness_finished.1,(_f(14) => _f(15));
+_f(1) & _f(2) & _f(5) & _f(11) & remove.1,(_f(3) => _f(12));
+_f(1) & _f(2) & _f(5) & _f(8) & disqualify.1,(_f(3) => _f(9));
+_f(1) & _f(2) & _f(5) & _f(6) & finished.1,(_f(3) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+RUNNER: FIN(INTEGER) & not(RUNNER = {});
+"Invariant is preserved";
+(({}) : (iseq(RUNNER)));
+finish : seq(RUNNER) & finish : NATURAL-{0} +-> RUNNER & finish ~ : RUNNER +-> NATURAL-{0} & ((finish) : (iseq(RUNNER)));
+((rr) : (RUNNER)) & not(rr : ran(finish));
+((((finish) <- (rr))) : (iseq(RUNNER)));
+((pp) : ((NAT-{0}))) & (pp <= size(finish));
+((((((finish) /|\ ((pp - 1)))) ^ (((finish) \|/ (pp))))) : (iseq(RUNNER)));
+(3 <= size(finish));
+((rr) : (RUNNER)) & ((rr) : (ran(finish)));
+((((((finish) /|\ ((((finish)~ )(rr) - 1)))) ^ (((finish) \|/ (((finish)~ )(rr)))))) : (iseq(RUNNER)));
+((rr) : (RUNNER));
+"Well definedness";
+((finish) : (seq(ran(finish))));
+((pp) : ((NAT-{0})));
+((pp) : (dom(finish)));
+((finish) : (((dom(finish)) +-> (ran(finish)))));
+(((pp - 1)) : (((0) .. (size(finish)))));
+((pp) : (((0) .. (size(finish)))));
+((((finish) /|\ ((pp - 1)))) : (seq(ran(((finish) /|\ ((pp - 1)))))));
+((((finish) \|/ (pp))) : (seq(ran(((finish) \|/ (pp))))));
+((3) : (((0) .. (size(finish)))));
+((rr) : (dom((finish)~)));
+(((finish)~) : (((dom((finish)~)) +-> (ran((finish)~)))));
+(((((finish)~ )(rr) - 1)) : (((0) .. (size(finish)))));
+((((finish)~ )(rr)) : (((0) .. (size(finish)))));
+((((finish) /|\ ((((finish)~ )(rr) - 1)))) : (seq(ran(((finish) /|\ ((((finish)~ )(rr) - 1)))))));
+((((finish) \|/ (((finish)~ )(rr)))) : (seq(ran(((finish) \|/ (((finish)~ )(rr)))))))
+END
+&
+THEORY EnumerateX
+END

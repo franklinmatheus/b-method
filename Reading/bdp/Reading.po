@@ -1,0 +1,88 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(16) & _f(32) & WellDefinedness_currentquery.3,(_f(52) => _f(54));
+_f(1) & _f(2) & _f(16) & _f(32) & WellDefinedness_currentquery.2,(_f(52) => _f(56));
+_f(1) & _f(2) & _f(16) & _f(32) & WellDefinedness_currentquery.1,(_f(52) => _f(55));
+_f(1) & _f(2) & _f(16) & _f(25) & WellDefinedness_finished.2,(_f(52) => _f(54));
+_f(1) & _f(2) & _f(16) & _f(25) & WellDefinedness_finished.1,(_f(52) => _f(53));
+_f(1) & _f(2) & _f(16) & WellDefinedness_Precondition_finished.1,(_f(29) & _f(49) & _f(30) & _f(52) => _f(55));
+_f(1) & _f(2) & _f(16) & WellDefinedness_Precondition_start.2,(_f(29) & _f(49) & _f(52) => _f(54));
+_f(1) & _f(2) & _f(16) & WellDefinedness_Precondition_start.1,(_f(29) & _f(49) & _f(52) => _f(53));
+_f(1) & _f(2) & _f(16) & _f(25) & finished.3,(_f(3) & _f(14) => _f(28));
+_f(1) & _f(2) & _f(16) & _f(25) & finished.2,(_f(3) & _f(12) => _f(27));
+_f(1) & _f(2) & _f(16) & _f(25) & finished.1,(_f(3) & _f(10) => _f(26));
+_f(1) & _f(2) & _f(16) & _f(22) & start.2,(_f(3) & _f(14) => _f(24));
+_f(1) & _f(2) & _f(16) & _f(22) & start.1,(_f(3) & _f(12) => _f(23));
+_f(1) & _f(2) & _f(16) & _f(17) & add.4,(_f(3) & _f(14) => _f(21));
+_f(1) & _f(2) & _f(16) & _f(17) & add.3,(_f(3) & _f(8) => _f(20));
+_f(1) & _f(2) & _f(16) & _f(17) & add.2,(_f(3) & _f(6) => _f(19));
+_f(1) & _f(2) & _f(16) & _f(17) & add.1,(_f(3) & _f(4) => _f(18));
+_f(1) & _f(2) & Initialisation.6,(_f(3) & _f(14) => _f(15));
+_f(1) & _f(2) & Initialisation.5,(_f(3) & _f(12) => _f(13));
+_f(1) & _f(2) & Initialisation.4,(_f(3) & _f(10) => _f(11));
+_f(1) & _f(2) & Initialisation.3,(_f(3) & _f(8) => _f(9));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+READER: FIN(INTEGER) & not(READER = {}) & BOOK: FIN(INTEGER) & not(BOOK = {}) & COPY: FIN(INTEGER) & not(COPY = {}) & ((1..2)*{RESPONSE}): FIN(NATURAL*{RESPONSE}) & not(((1..2)*{RESPONSE}) = {});
+"Invariant is preserved";
+"Check invariant copies : POW( COPY)";
+{} : POW( COPY);
+"Check invariant books : POW( BOOK)";
+{} : POW( BOOK);
+"Check invariant ((copyof) : (((copies) >-> (books))))";
+(({}) : ((({}) >-> ({}))));
+"Check invariant ((hasread) : (((READER) <-> (BOOK))))";
+(({}) : (((READER) <-> (BOOK))));
+"Check invariant ((reading) : (((READER) >+> (COPY))))";
+(({}) : (((READER) >+> (COPY))));
+"Check invariant ((((((reading) ; (copyof))) /\ (hasread))) = ({}))";
+(((((({}) ; ({}))) /\ ({}))) = ({}));
+copies : POW( COPY) & books : POW( BOOK) & copyof : copies +-> books & copyof : copies --> books & copyof~ : books +-> copies & ((copyof) : (((copies) >-> (books)))) & ((hasread) : (((READER) <-> (BOOK)))) & reading : READER +-> COPY & reading~ : COPY +-> READER & ((reading) : (((READER) >+> (COPY)))) & ((((((reading) ; (copyof))) /\ (hasread))) = ({}));
+((cc) : (COPY)) & ((bb) : (BOOK)) & not(cc : copies) & not(((cc) |-> (bb)) : copyof);
+((copies) \/ (({cc}))) : POW( COPY);
+((books) \/ (({bb}))) : POW( BOOK);
+((({((cc) |-> (bb))})) : (((((copies) \/ (({cc})))) >-> (((books) \/ (({bb})))))));
+((((((reading) ; (({((cc) |-> (bb))})))) /\ (hasread))) = ({}));
+((rr) : (READER)) & ((cc) : (COPY)) & not((copyof )(cc) : (hasread )[({rr})]) & not(rr : dom(reading)) & not(cc : ran(reading));
+((((reading) \/ (({((rr) |-> (cc))})))) : (((READER) >+> (COPY))));
+((((((((reading) \/ (({((rr) |-> (cc))})))) ; (copyof))) /\ (hasread))) = ({}));
+((rr) : (READER)) & ((cc) : (COPY)) & ((rr) : (dom(reading))) & ((cc) = ((reading )(rr)));
+((((hasread) \/ (({((rr) |-> ((copyof )(cc)))})))) : (((READER) <-> (BOOK))));
+((((({rr})) <<| (reading))) : (((READER) >+> (COPY))));
+((((((((({rr})) <<| (reading))) ; (copyof))) /\ (((hasread) \/ (({((rr) |-> ((copyof )(cc)))})))))) = ({}));
+((rr) : (READER));
+((rr) : (dom(reading)));
+not(((rr) : (dom(reading))));
+((rr) : (READER)) & ((rr) : (dom(reading)));
+((rr) : (READER)) & ((bb) : (BOOK));
+((bb) : ((hasread )[({rr})]));
+not(((bb) : ((hasread )[({rr})])));
+READER: FIN(INTEGER) & not(READER = {});
+reading : READER +-> COPY;
+reading~ : COPY +-> READER;
+((reading) : (((READER) >+> (COPY))));
+((hasread) : (((READER) <-> (BOOK))));
+copyof : copies +-> books;
+copyof : copies --> books;
+copyof~ : books +-> copies;
+((copyof) : (((copies) >-> (books))));
+books : POW( BOOK);
+copies : POW( COPY);
+not(cc : copies);
+((bb) : (BOOK));
+((cc) : (COPY));
+not(rr : dom(reading));
+not((copyof )(cc) : (hasread )[({rr})]);
+"Well definedness";
+((cc) : (dom(copyof)));
+((copyof) : (((dom(copyof)) +-> (ran(copyof)))));
+((reading) : (((dom(reading)) +-> (ran(reading)))));
+(((reading )(rr)) : (dom(copyof)))
+END
+&
+THEORY EnumerateX IS
+RESPONSE == {yes,no}
+END

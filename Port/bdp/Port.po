@@ -1,0 +1,70 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(10) & _f(21) & WellDefinedness_numberwaiting.1,(_f(36) => _f(38));
+_f(1) & _f(2) & _f(10) & _f(18) & WellDefinedness_leave.2,(_f(36) => _f(43));
+_f(1) & _f(2) & _f(10) & _f(18) & WellDefinedness_leave.1,(_f(36) => _f(42));
+_f(1) & _f(2) & _f(10) & _f(14) & WellDefinedness_dock.2,(_f(36) => _f(41));
+_f(1) & _f(2) & _f(10) & _f(14) & WellDefinedness_dock.1,(_f(36) => _f(38));
+_f(1) & _f(2) & _f(10) & _f(11) & WellDefinedness_arrive.1,(_f(36) => _f(38));
+_f(1) & _f(2) & _f(10) & WellDefinedness_Precondition_arrive.1,(_f(35) & _f(34) & _f(33) & _f(36) => _f(37));
+_f(1) & _f(2) & _f(10) & _f(22) & jumpqueue.2,(_f(3) & _f(8) => _f(24));
+_f(1) & _f(2) & _f(10) & _f(22) & jumpqueue.1,(_f(3) & _f(6) => _f(23));
+_f(1) & _f(2) & _f(10) & _f(18) & leave.2,(_f(3) & _f(8) => _f(20));
+_f(1) & _f(2) & _f(10) & _f(18) & leave.1,(_f(3) & _f(6) => _f(19));
+_f(1) & _f(2) & _f(10) & _f(14) & dock.3,(_f(3) & _f(8) => _f(17));
+_f(1) & _f(2) & _f(10) & _f(14) & dock.2,(_f(3) & _f(6) => _f(16));
+_f(1) & _f(2) & _f(10) & _f(14) & dock.1,(_f(3) & _f(4) => _f(15));
+_f(1) & _f(2) & _f(10) & _f(11) & arrive.2,(_f(3) & _f(8) => _f(13));
+_f(1) & _f(2) & _f(10) & _f(11) & arrive.1,(_f(3) & _f(4) => _f(12));
+_f(1) & _f(2) & Initialisation.3,(_f(3) & _f(8) => _f(9));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+SHIP: FIN(INTEGER) & not(SHIP = {}) & QUAY: FIN(INTEGER) & not(QUAY = {});
+"Invariant is preserved";
+"Check invariant ((waiting) : (iseq(SHIP)))";
+(({}) : (iseq(SHIP)));
+"Check invariant ((docked) : (((QUAY) >+> (SHIP))))";
+(({}) : (((QUAY) >+> (SHIP))));
+"Check invariant ((((ran(waiting)) /\ (ran(docked)))) = ({}))";
+((((ran({})) /\ (ran({})))) = ({}));
+waiting : seq(SHIP) & waiting : NATURAL-{0} +-> SHIP & waiting ~ : SHIP +-> NATURAL-{0} & ((waiting) : (iseq(SHIP))) & docked : QUAY +-> SHIP & docked~ : SHIP +-> QUAY & ((docked) : (((QUAY) >+> (SHIP)))) & ((((ran(waiting)) /\ (ran(docked)))) = ({}));
+((ss) : (SHIP)) & not(ss : ran(waiting)) & not(ss : ran(docked)) & (card(waiting) +1 <= 2147483647);
+((((waiting) <- (ss))) : (iseq(SHIP)));
+((((ran(((waiting) <- (ss)))) /\ (ran(docked)))) = ({}));
+not(waiting = {}) & ((qq) : (QUAY)) & not(qq : dom(docked));
+((tail(waiting)) : (iseq(SHIP)));
+((((docked) <+ (({((qq) |-> (first(waiting)))})))) : (((QUAY) >+> (SHIP))));
+((((ran(tail(waiting))) /\ (ran(((docked) <+ (({((qq) |-> (first(waiting)))}))))))) = ({}));
+((ss) : (SHIP)) & ((ss) : (ran(docked)));
+((((docked) |>> (({ss})))) : (((QUAY) >+> (SHIP))));
+((((ran(waiting)) /\ (ran(((docked) |>> (({ss}))))))) = ({}));
+btrue;
+((ss) : (SHIP)) & not(ss : ran(docked)) & not(ss : ran(waiting)) & ((qq) : (QUAY)) & not(qq : dom(docked));
+((((docked) <+ (({((qq) |-> (ss))})))) : (((QUAY) >+> (SHIP))));
+((((ran(waiting)) /\ (ran(((docked) <+ (({((qq) |-> (ss))}))))))) = ({}));
+SHIP: FIN(INTEGER) & not(SHIP = {});
+docked : QUAY +-> SHIP;
+docked~ : SHIP +-> QUAY;
+((docked) : (((QUAY) >+> (SHIP))));
+waiting : seq(SHIP);
+waiting : NATURAL-{0} +-> SHIP;
+waiting ~ : SHIP +-> NATURAL-{0};
+((waiting) : (iseq(SHIP)));
+not(ss : ran(docked));
+not(ss : ran(waiting));
+((ss) : (SHIP));
+"Well definedness";
+((waiting) : (FIN(waiting)));
+((waiting) : (seq(ran(waiting))));
+((qq) : (QUAY));
+not(waiting = {});
+not(((waiting) = ({})));
+((ss) : (dom((docked)~)));
+(((docked)~) : (((dom((docked)~)) +-> (ran((docked)~)))))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,58 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_quickclose.2,(_f(26) & _f(27) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_quickclose.1,(_f(26) & _f(27) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_lockdoor.2,(_f(26) & _f(27) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_lockdoor.1,(_f(26) & _f(27) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_unlockdoor.2,(_f(26) & _f(27) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_unlockdoor.1,(_f(26) & _f(27) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_opendoor.2,(_f(26) & _f(27) => _f(29));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & WellDefinedness_Precondition_opendoor.1,(_f(26) & _f(27) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(21) & quickclose.2,(_f(8) & _f(11) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(21) & quickclose.1,(_f(8) & _f(9) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(16) & lockdoor.2,(_f(8) & _f(11) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(16) & lockdoor.1,(_f(8) & _f(9) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(16) & unlockdoor.2,(_f(8) & _f(11) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(16) & unlockdoor.1,(_f(8) & _f(9) => _f(17));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(14) & opendoor.1,(_f(8) & _f(11) => _f(15));
+_f(1) & _f(2) & _f(3) & _f(4) & Initialisation.2,(_f(5) & _f(6) & _f(7) & _f(8) & _f(11) => _f(12));
+_f(1) & _f(2) & _f(3) & _f(4) & Initialisation.1,(_f(5) & _f(6) & _f(7) & _f(8) & _f(9) => _f(10))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {});
+DOOR: FIN(INTEGER) & not(DOOR = {}) & ((1..2)*{POSITION}): FIN(NATURAL*{POSITION}) & not(((1..2)*{POSITION}) = {});
+position : DOOR +-> ((1..2)*{POSITION}) & dom(position) = DOOR & ((position) : (((DOOR) --> (((1..2)*{POSITION})))));
+(DOOR * ({(2|->POSITION)})) : DOOR +-> ((1..2)*{POSITION});
+dom((DOOR * ({(2|->POSITION)}))) = DOOR;
+(((DOOR * ({(2|->POSITION)}))) : (((DOOR) --> (((1..2)*{POSITION})))));
+"Invariant is preserved";
+"Check invariant ((status) : (((DOOR) --> (STATUS))))";
+(((DOOR * ({(1|->STATUS)}))) : (((DOOR) --> (((1..2)*{STATUS})))));
+"Check invariant ((position)~ )[({open})] : POW( ((status)~ )[({unlocked})])";
+(((DOOR * ({(2|->POSITION)})))~ )[({(1|->POSITION)})] : POW( (((DOOR * ({(1|->STATUS)})))~ )[({(2|->STATUS)})]);
+status : DOOR +-> ((1..2)*{STATUS}) & dom(status) = DOOR & ((status) : (((DOOR) --> (((1..2)*{STATUS}))))) & ((position)~ )[({(1|->POSITION)})] : POW( ((status)~ )[({(2|->STATUS)})]);
+((dd) : (DOOR)) & (((status )(dd)) = ((2|->STATUS)));
+((((position) <+ (({((dd) |-> ((1|->POSITION)))}))))~ )[({(1|->POSITION)})] : POW( ((status)~ )[({(2|->STATUS)})]);
+((dd) : (DOOR)) & (((position )(dd)) = ((2|->POSITION)));
+((((status) <+ (({((dd) |-> ((2|->STATUS)))})))) : (((DOOR) --> (((1..2)*{STATUS})))));
+((position)~ )[({(1|->POSITION)})] : POW( ((((status) <+ (({((dd) |-> ((2|->STATUS)))}))))~ )[({(2|->STATUS)})]);
+((((status) <+ (({((dd) |-> ((1|->STATUS)))})))) : (((DOOR) --> (((1..2)*{STATUS})))));
+((position)~ )[({(1|->POSITION)})] : POW( ((((status) <+ (({((dd) |-> ((1|->STATUS)))}))))~ )[({(2|->STATUS)})]);
+((dd) : (DOOR)) & (((position )(dd)) = ((1|->POSITION)));
+((((position) <+ (({((dd) |-> ((2|->POSITION)))}))))~ )[({(1|->POSITION)})] : POW( ((((status) <+ (({((dd) |-> ((1|->STATUS)))}))))~ )[({(2|->STATUS)})]);
+status : DOOR +-> ((1..2)*{STATUS});
+dom(status) = DOOR;
+((status) : (((DOOR) --> (((1..2)*{STATUS})))));
+((dd) : (DOOR));
+"Well definedness";
+((dd) : (dom(status)));
+((status) : (((dom(status)) +-> (ran(status)))));
+((dd) : (dom(position)));
+((position) : (((dom(position)) +-> (ran(position)))))
+END
+&
+THEORY EnumerateX IS
+POSITION == {open,closed};
+STATUS == {locked,unlocked}
+END

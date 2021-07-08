@@ -1,0 +1,3204 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp">
+<Attr>
+<Pos c="1" s="4" l="8"/>
+</Attr>
+<Set>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:1:1">
+<Attr>
+<Pos c="5" s="4" l="9"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id typref="2103186537" value="REPORT" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:1">
+<Attr>
+<Pos c="11" s="6" l="9"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="2771369456" value="present" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:2:1">
+<Attr>
+<Pos c="21" s="7" l="9"/>
+</Attr>
+</Id>
+<Id typref="2771369456" value="notpresent" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:2:2">
+<Attr>
+<Pos c="30" s="10" l="9"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Attr>
+<Pos c="1" s="10" l="14"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:">
+<Attr>
+<Pos c="10" s="2" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:1:1">
+<Attr>
+<Pos c="5" s="4" l="15"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="NATURAL1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="13" s="8" l="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="29" s="1" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:2:1">
+<Attr>
+<Pos c="24" s="4" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="949986794" op="FIN">
+<Attr>
+<Pos c="31" s="3" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="35" s="4" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="11" s="1" l="16"/>
+</Attr>
+<Id typref="2701647786" value="sze" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="7" s="3" l="16"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="5" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:3:2">
+<Attr>
+<Pos c="13" s="1" l="16"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="18" s="1" l="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos c="7" s="4" l="17"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="12" s="4" l="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id typref="2701647786" value="sze" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:2">
+<Attr>
+<Pos c="20" s="3" l="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="13" s="1" l="18"/>
+</Attr>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:5:1">
+<Attr>
+<Pos c="7" s="5" l="18"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:5:2">
+<Attr>
+<Pos c="15" s="4" l="18"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="inv">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos c="1" s="14" l="27"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:6:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="28"/>
+</Attr>
+</Id>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:6:1:1:2">
+<Attr>
+<Pos c="13" s="7" l="28"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="*">
+<Attr>
+<Pos c="5" s="6" l="28"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:6:1:2:1:1">
+<Attr>
+<Pos c="24" s="4" l="28"/>
+</Attr>
+</Id>
+<Nary_Exp typref="1333172640" op="{">
+<Attr>
+<Pos c="31" s="1" l="28"/>
+</Attr>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:6:1:2:1:2:1">
+<Attr>
+<Pos c="32" s="5" l="28"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+<EmptySet typref="3817003670" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:6:1:2:2">
+<Attr>
+<Pos c="13" s="7" l="28"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>guestcheckin</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="33"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="28" s="1" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:2">
+<Attr>
+<Pos c="30" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="40" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:1">
+<Attr>
+<Pos c="37" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:2">
+<Attr>
+<Pos c="43" s="5" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="54" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:1">
+<Attr>
+<Pos c="51" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="57" s="3" l="33"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:2:1">
+<Attr>
+<Pos c="61" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="82" s="1" l="33"/>
+</Attr>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="77" s="0" l="33"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:2">
+<Attr>
+<Pos c="78" s="2" l="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:2">
+<Attr>
+<Pos c="84" s="5" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="34"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:1:1:1:2">
+<Attr>
+<Pos c="21" s="2" l="34"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:1:2:1">
+<Attr>
+<Pos c="28" s="2" l="34"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:2:1:1">
+<Attr>
+<Pos c="34" s="7" l="34"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="\/">
+<Attr>
+<Pos c="34" s="7" l="34"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:2:2:1:1">
+<Attr>
+<Pos c="45" s="7" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="56" s="1" l="34"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="60" s="3" l="34"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:2:2:1:2:1:1">
+<Attr>
+<Pos c="57" s="2" l="34"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:3:1:2:2:1:2:1:2">
+<Attr>
+<Pos c="64" s="2" l="34"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>guestcheckout</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="38"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:2:1:1">
+<Attr>
+<Pos c="13" s="2" l="38"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:2:1:2">
+<Attr>
+<Pos c="18" s="4" l="38"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="39"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="39"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:1:1:1:2">
+<Attr>
+<Pos c="21" s="2" l="39"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:1:2:1">
+<Attr>
+<Pos c="28" s="5" l="39"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:2:1:1">
+<Attr>
+<Pos c="37" s="7" l="39"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="&lt;&lt;|">
+<Attr>
+<Pos c="37" s="7" l="39"/>
+</Attr>
+<Nary_Exp typref="3603043417" op="{">
+<Attr>
+<Pos c="48" s="1" l="39"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:2:2:1:1:1">
+<Attr>
+<Pos c="49" s="2" l="39"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:3:1:2:2:1:2">
+<Attr>
+<Pos c="57" s="7" l="39"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>guestquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="43"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:3:1:1">
+<Attr>
+<Pos c="13" s="2" l="43"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:3:1:2">
+<Attr>
+<Pos c="18" s="4" l="43"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:1:1">
+<Attr>
+<Pos c="14" s="2" l="44"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="14" s="2" l="44"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:1">
+<Attr>
+<Pos c="20" s="6" l="44"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:2">
+<Attr>
+<Pos c="27" s="2" l="44"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>presentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="48"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="48"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="48"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="28" s="2" l="48"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="48"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:2:2">
+<Attr>
+<Pos c="31" s="5" l="48"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<If_Sub elseif="no">
+<Attr>
+<Pos c="14" s="2" l="49"/>
+</Attr>
+<Condition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" s="1" l="49"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="49"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="22" s="3" l="49"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:2:1">
+<Attr>
+<Pos c="26" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2771369456" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:2:1:1:1">
+<Attr>
+<Pos c="14" s="2" l="50"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id typref="2771369456" value="present" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:2:1:2:1">
+<Attr>
+<Pos c="14" s="2" l="50"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+<Else>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2771369456" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:3:1:1:1">
+<Attr>
+<Pos c="14" s="2" l="51"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id typref="2771369456" value="notpresent" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:3:1:2:1">
+<Attr>
+<Pos c="14" s="2" l="51"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Else>
+</If_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>guestswap</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="56"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="56"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="56"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="28" s="1" l="56"/>
+</Attr>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="56"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:2:2">
+<Attr>
+<Pos c="30" s="4" l="56"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="57"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="&lt;+">
+<Attr>
+<Pos c="14" s="6" l="57"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:1">
+<Attr>
+<Pos c="24" s="6" l="57"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="34" s="1" l="57"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="38" s="3" l="57"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="35" s="2" l="57"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="48" s="0" l="57"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="42" s="6" l="57"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:2">
+<Attr>
+<Pos c="49" s="2" l="57"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="55" s="3" l="57"/>
+</Attr>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:1">
+<Attr>
+<Pos c="53" s="2" l="57"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="65" s="0" l="57"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:1">
+<Attr>
+<Pos c="59" s="6" l="57"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:2">
+<Attr>
+<Pos c="66" s="2" l="57"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:1:1">
+<Attr>
+<Pos c="14" s="7" l="58"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="&lt;+">
+<Attr>
+<Pos c="14" s="7" l="58"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:1">
+<Attr>
+<Pos c="25" s="7" l="58"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="36" s="1" l="58"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="40" s="3" l="58"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:1">
+<Attr>
+<Pos c="37" s="2" l="58"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="51" s="0" l="58"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="7" l="58"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:2">
+<Attr>
+<Pos c="52" s="2" l="58"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="58" s="3" l="58"/>
+</Attr>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:1">
+<Attr>
+<Pos c="56" s="2" l="58"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="69" s="0" l="58"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:1">
+<Attr>
+<Pos c="62" s="7" l="58"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:2">
+<Attr>
+<Pos c="70" s="2" l="58"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>step</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="62"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="30" s="1" l="62"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="27" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:1">
+<Attr>
+<Pos c="25" s="2" l="62"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:2">
+<Attr>
+<Pos c="28" s="1" l="62"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:2">
+<Attr>
+<Pos c="32" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="42" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:3:1">
+<Attr>
+<Pos c="39" s="2" l="62"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3603043417" op="dom">
+<Attr>
+<Pos c="44" s="3" l="62"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:3:2:1">
+<Attr>
+<Pos c="48" s="7" l="62"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:1:1">
+<Attr>
+<Pos c="14" s="6" l="63"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="&lt;+">
+<Attr>
+<Pos c="14" s="6" l="63"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:1">
+<Attr>
+<Pos c="24" s="6" l="63"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="34" s="1" l="63"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="40" s="3" l="63"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="37" s="1" l="63"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:1:1">
+<Attr>
+<Pos c="35" s="2" l="63"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:1:2">
+<Attr>
+<Pos c="38" s="1" l="63"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="50" s="0" l="63"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="6" l="63"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:2">
+<Attr>
+<Pos c="51" s="2" l="63"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="59" s="3" l="63"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:2:1">
+<Attr>
+<Pos c="56" s="2" l="63"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:2:2">
+<Attr>
+<Pos c="63" s="5" l="63"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:1:1">
+<Attr>
+<Pos c="14" s="7" l="64"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2221628901" op="-">
+<Attr>
+<Pos c="14" s="7" l="64"/>
+</Attr>
+<Binary_Exp typref="2221628901" op="&lt;+">
+<Attr>
+<Pos c="34" s="2" l="64"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:1">
+<Attr>
+<Pos c="26" s="7" l="64"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="37" s="1" l="64"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="43" s="3" l="64"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="40" s="1" l="64"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:1:1">
+<Attr>
+<Pos c="38" s="2" l="64"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:1:2">
+<Attr>
+<Pos c="41" s="1" l="64"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="54" s="0" l="64"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:1">
+<Attr>
+<Pos c="47" s="7" l="64"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:2">
+<Attr>
+<Pos c="55" s="2" l="64"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Nary_Exp typref="2221628901" op="{">
+<Attr>
+<Pos c="63" s="1" l="64"/>
+</Attr>
+<Binary_Exp typref="625728756" op="|-&gt;">
+<Attr>
+<Pos c="67" s="3" l="64"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:1">
+<Attr>
+<Pos c="64" s="2" l="64"/>
+</Attr>
+</Id>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="78" s="0" l="64"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="71" s="7" l="64"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:2">
+<Attr>
+<Pos c="79" s="2" l="64"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="23"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((pguests) : (((ROOM) +-&gt; (NAME))))">
+<Attr>
+<Pos c="13" s="1" l="25"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="5" s="7" l="25"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="+-&gt;">
+<Attr>
+<Pos c="20" s="3" l="25"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:1">
+<Attr>
+<Pos c="15" s="4" l="25"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:2:2:2">
+<Attr>
+<Pos c="24" s="4" l="25"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos c="1" s="4" l="8"/>
+</Attr>
+<Set>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:1:1">
+<Attr>
+<Pos c="5" s="4" l="9"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id typref="2103186537" value="REPORT" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:1">
+<Attr>
+<Pos c="11" s="6" l="9"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="2771369456" value="present" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:2:1">
+<Attr>
+<Pos c="21" s="7" l="9"/>
+</Attr>
+</Id>
+<Id typref="2771369456" value="notpresent" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:1:2:2:2">
+<Attr>
+<Pos c="30" s="10" l="9"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:">
+<Attr>
+<Pos c="10" s="2" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:1:1">
+<Attr>
+<Pos c="5" s="4" l="15"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="NATURAL1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="13" s="8" l="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="29" s="1" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:2:1">
+<Attr>
+<Pos c="24" s="4" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="949986794" op="FIN">
+<Attr>
+<Pos c="31" s="3" l="15"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="35" s="4" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="11" s="1" l="16"/>
+</Attr>
+<Id typref="2701647786" value="sze" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="7" s="3" l="16"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="5" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:3:2">
+<Attr>
+<Pos c="13" s="1" l="16"/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="12" s="4" l="17"/>
+</Attr>
+</Id>
+<Unary_Exp op="FIN">
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="12" s="4" l="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="18" s="1" l="17"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos c="7" s="4" l="17"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="12" s="4" l="17"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id typref="2701647786" value="sze" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:4:1:4:2">
+<Attr>
+<Pos c="20" s="3" l="17"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":" initialTag="((guests) : (((ROOM) --&gt; (NAME))))">
+<Attr>
+<Pos c="12" s="1" l="24"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:1">
+<Attr>
+<Pos c="5" s="6" l="24"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3443605172" op="--&gt;">
+<Attr>
+<Pos c="19" s="3" l="24"/>
+</Attr>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:1">
+<Attr>
+<Pos c="14" s="4" l="24"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:5:1:1:2:2">
+<Attr>
+<Pos c="23" s="4" l="24"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_guestcheckin</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="33"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="28" s="1" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:2">
+<Attr>
+<Pos c="30" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="40" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:1">
+<Attr>
+<Pos c="37" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:2">
+<Attr>
+<Pos c="43" s="5" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="54" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:1">
+<Attr>
+<Pos c="51" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="57" s="3" l="33"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:2:1">
+<Attr>
+<Pos c="61" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:2">
+<Attr>
+<Pos c="78" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_guestcheckin</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="33"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="28" s="1" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:2:2">
+<Attr>
+<Pos c="30" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="40" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:1">
+<Attr>
+<Pos c="37" s="2" l="33"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:3:2">
+<Attr>
+<Pos c="43" s="5" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="54" s="2" l="33"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:1">
+<Attr>
+<Pos c="51" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="57" s="3" l="33"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:4:2:1">
+<Attr>
+<Pos c="61" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="82" s="1" l="33"/>
+</Attr>
+<Binary_Exp typref="2144979833" op="(">
+<Attr>
+<Pos c="77" s="0" l="33"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:1">
+<Attr>
+<Pos c="71" s="6" l="33"/>
+</Attr>
+</Id>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:1:2">
+<Attr>
+<Pos c="78" s="2" l="33"/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:1:2:1:5:2">
+<Attr>
+<Pos c="84" s="5" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_guestcheckout</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_guestcheckout</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="38"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:2:1:1">
+<Attr>
+<Pos c="13" s="2" l="38"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:2:2:1:2">
+<Attr>
+<Pos c="18" s="4" l="38"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_guestquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_guestquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="43"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:3:1:1">
+<Attr>
+<Pos c="13" s="2" l="43"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:3:1:2">
+<Attr>
+<Pos c="18" s="4" l="43"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:2">
+<Attr>
+<Pos c="27" s="2" l="44"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:1">
+<Attr>
+<Pos c="20" s="6" l="44"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:1">
+<Attr>
+<Pos c="20" s="6" l="44"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:1">
+<Attr>
+<Pos c="20" s="6" l="44"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:3:4:1:2:1:1">
+<Attr>
+<Pos c="20" s="6" l="44"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_presentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="48"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="48"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="48"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_presentquery</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="48"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="48"/>
+</Attr>
+</Id>
+<Id typref="1333172640" value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="48"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="28" s="2" l="48"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="48"/>
+</Attr>
+</Id>
+<Id typref="2144979833" value="empty" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:3:1:2:2">
+<Attr>
+<Pos c="31" s="5" l="48"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" s="1" l="49"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="49"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="22" s="3" l="49"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:2:1">
+<Attr>
+<Pos c="26" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Unary_Pred op="not">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="20" s="1" l="49"/>
+</Attr>
+<Id typref="2144979833" value="nn" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="49"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1333172640" op="ran">
+<Attr>
+<Pos c="22" s="3" l="49"/>
+</Attr>
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:4:4:1:1:1:2:1">
+<Attr>
+<Pos c="26" s="6" l="49"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Unary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_guestswap</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="56"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="56"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="56"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_guestswap</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="56"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="56"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="56"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="28" s="1" l="56"/>
+</Attr>
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:2:1">
+<Attr>
+<Pos c="25" s="2" l="56"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:2:1:2:2">
+<Attr>
+<Pos c="30" s="4" l="56"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:2">
+<Attr>
+<Pos c="49" s="2" l="57"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="42" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="42" s="6" l="57"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="42" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="42" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:2">
+<Attr>
+<Pos c="66" s="2" l="57"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:1">
+<Attr>
+<Pos c="59" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:1">
+<Attr>
+<Pos c="59" s="6" l="57"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:1">
+<Attr>
+<Pos c="59" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:1:2:1:2:2:2:1">
+<Attr>
+<Pos c="59" s="6" l="57"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="ss" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:2">
+<Attr>
+<Pos c="52" s="2" l="58"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="7" l="58"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:2">
+<Attr>
+<Pos c="70" s="2" l="58"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:1">
+<Attr>
+<Pos c="62" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:1">
+<Attr>
+<Pos c="62" s="7" l="58"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:1">
+<Attr>
+<Pos c="62" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:5:3:1:2:2:1:2:2:2:1">
+<Attr>
+<Pos c="62" s="7" l="58"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_step</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="62"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="30" s="1" l="62"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="27" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:1">
+<Attr>
+<Pos c="25" s="2" l="62"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:2">
+<Attr>
+<Pos c="28" s="1" l="62"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:2">
+<Attr>
+<Pos c="32" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_step</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="16" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:1">
+<Attr>
+<Pos c="13" s="2" l="62"/>
+</Attr>
+</Id>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:1:2">
+<Attr>
+<Pos c="18" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="30" s="1" l="62"/>
+</Attr>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="27" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:1">
+<Attr>
+<Pos c="25" s="2" l="62"/>
+</Attr>
+</Id>
+<Integer_Literal typref="2701647786" value="1" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:1:2">
+<Attr>
+<Pos c="28" s="1" l="62"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id typref="3603043417" value="ROOM" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:2:2">
+<Attr>
+<Pos c="32" s="4" l="62"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="42" s="1" l="62"/>
+</Attr>
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:3:1">
+<Attr>
+<Pos c="39" s="2" l="62"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3603043417" op="dom">
+<Attr>
+<Pos c="44" s="3" l="62"/>
+</Attr>
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:2:1:3:2:1">
+<Attr>
+<Pos c="48" s="7" l="62"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:2">
+<Attr>
+<Pos c="51" s="2" l="63"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="6" l="63"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="6" l="63"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="6" l="63"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="guests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:1:2:1:2:1:2:1">
+<Attr>
+<Pos c="44" s="6" l="63"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:2">
+<Attr>
+<Pos c="55" s="2" l="64"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:1">
+<Attr>
+<Pos c="47" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:1">
+<Attr>
+<Pos c="47" s="7" l="64"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:1">
+<Attr>
+<Pos c="47" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:1:2:1:2:1">
+<Attr>
+<Pos c="47" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id typref="2701647786" value="rr" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:2">
+<Attr>
+<Pos c="79" s="2" l="64"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="71" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="71" s="7" l="64"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="71" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id typref="2221628901" value="pguests" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:7:6:3:1:2:2:1:2:1:2:1">
+<Attr>
+<Pos c="71" s="7" l="64"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="1333172640">
+<Unary_Exp op="POW">
+<Id value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2103186537">
+<Unary_Exp op="POW">
+<Id value="REPORT" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2771369456">
+<Id value="REPORT" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:3:1"/>
+</Type>
+<Type id="2144979833">
+<Id value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:4:1"/>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:5:1"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:6:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2221628901">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:7:1:1:1"/>
+<Id value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:7:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="949986794">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:8:1:1:1"/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3443605172">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:9:1:1:1:1"/>
+<Id value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:9:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:10:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="625728756">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:11:1:1"/>
+<Id value="NAME" tag="C:\Users\Franklin\Desktop\Formal methods\Hotelguests\bdp\Hotelguests.bxml:1:8:11:1:2"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

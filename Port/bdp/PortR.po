@@ -1,0 +1,80 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(46) & WellDefinedness_leave.2,(_f(41) => _f(47));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(46) & WellDefinedness_leave.1,(_f(41) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & WellDefinedness_dock.4,(_f(22) => _f(24));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & WellDefinedness_dock.3,(_f(22) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & WellDefinedness_dock.2,(_f(41) => _f(45));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & WellDefinedness_dock.1,(_f(41) => _f(43));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(16) & WellDefinedness_arrive.1,(_f(41) => _f(43));
+_f(1) & _f(2) & _f(3) & _f(14) & WellDefinednessInvariant.1,(_f(40) & _f(41) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(35) & jumpqueue.1,(_f(7) & _f(12) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(33) & numberwaiting.1,(_f(7) => _f(34));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(29) & leave.3,(_f(7) => _f(32));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(29) & leave.2,(_f(7) & _f(12) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(29) & leave.1,(_f(22) => _f(30));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.6,(_f(7) & _f(12) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.5,(_f(7) & _f(19) => _f(27));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.4,(_f(7) & _f(10) => _f(26));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.3,(_f(7) & _f(8) => _f(25));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.2,(_f(22) => _f(24));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(21) & dock.1,(_f(22) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(16) & arrive.3,(_f(7) & _f(19) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(16) & arrive.2,(_f(7) & _f(10) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(14) & _f(15) & _f(16) & arrive.1,(_f(7) & _f(8) => _f(17));
+_f(1) & _f(2) & _f(3) & Initialisation.3,(_f(4) & _f(5) & _f(6) & _f(7) & _f(12) => _f(13));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(5) & _f(6) & _f(7) & _f(10) => _f(11));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) => _f(9))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+SHIP: FIN(INTEGER) & not(SHIP = {}) & QUAY: FIN(INTEGER) & not(QUAY = {});
+list$1 : NATURAL-{0} +-> SHIP & ((list$1) : (seq(SHIP))) & ((fun$1) : (((SHIP) +-> (QUAY))));
+{} : NATURAL-{0} +-> SHIP;
+(({}) : (seq(SHIP)));
+(({}) : (((SHIP) +-> (QUAY))));
+"Refinement is correct";
+"Check invariant ((num$1) : (NAT))";
+((0) : (NAT));
+"Check invariant ((num$1) = (size(waiting)))";
+((0) = (size({})));
+"Check invariant (((docked)~) = (fun$1))";
+((({})~) = ({}));
+waiting : seq(SHIP) & waiting : NATURAL-{0} +-> SHIP & waiting ~ : SHIP +-> NATURAL-{0} & ((waiting) : (iseq(SHIP))) & docked : QUAY +-> SHIP & docked~ : SHIP +-> QUAY & ((docked) : (((QUAY) >+> (SHIP)))) & ((((ran(waiting)) /\ (ran(docked)))) = ({}));
+((num$1) : (NAT)) & ((num$1) = (size(waiting))) & ((waiting) = (list$1)) & (((docked)~) = (fun$1));
+((ss) : (SHIP)) & not(ss : ran(waiting)) & not(ss : ran(docked)) & (card(waiting) +1 <= 2147483647);
+(((num$1 + 1)) : (NAT));
+(((num$1 + 1)) = (size(((waiting) <- (ss)))));
+"Check invariant ((waiting) = (list$1))";
+((((waiting) <- (ss))) = (((list$1) <- (ss))));
+not(waiting = {}) & ((qq) : (QUAY)) & not(qq : dom(docked));
+"Precondition predicate";
+not(list$1 = {});
+((first(list$1)) : (SHIP));
+(((num$1 - 1)) : (NAT));
+(((num$1 - 1)) = (size(tail(waiting))));
+((tail(waiting)) = (tail(list$1)));
+(((((docked) <+ (({((qq) |-> (first(waiting)))}))))~) = (((fun$1) <+ (({((first(list$1)) |-> (qq))})))));
+((ss) : (SHIP)) & ((ss) : (ran(docked))) & ((qq) = (qq$1));
+((ss) : (dom(fun$1)));
+(((((docked) |>> (({ss}))))~) = (((({ss})) <<| (fun$1))));
+((((docked)~ )(ss)) = ((fun$1 )(ss)));
+((nn) = (nn$1));
+((size(waiting)) = (num$1));
+((ss) : (SHIP)) & not(ss : ran(docked)) & not(ss : ran(waiting)) & ((qq) : (QUAY)) & not(qq : dom(docked));
+(((((docked) <+ (({((qq) |-> (ss))}))))~) = (((fun$1) <+ (({((ss) |-> (qq))})))));
+btrue;
+((waiting) = (list$1));
+((num$1) = (size(waiting)));
+((num$1) : (NAT));
+"Well definedness";
+((waiting) : (seq(ran(waiting))));
+((list$1) : (seq(ran(list$1))));
+((qq) : (SHIP));
+not(((list$1) = ({})));
+((ss) : (SHIP)) & ((ss) : (ran(docked)));
+((fun$1) : (((dom(fun$1)) +-> (ran(fun$1)))))
+END
+&
+THEORY EnumerateX
+END

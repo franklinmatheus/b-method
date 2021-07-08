@@ -1,0 +1,16 @@
+THEORY ProofList IS
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+SET1: FIN(INTEGER) & not(SET1 = {}) & SET2: FIN(INTEGER) & not(SET2 = {});
+"Invariant is preserved";
+(((SET1 * SET2)) : (((SET1) <-> (SET2))));
+((cross) : (((SET1) <-> (SET2))));
+((ss) : (SET2));
+SET1: FIN(INTEGER) & not(SET1 = {})
+END
+&
+THEORY EnumerateX
+END

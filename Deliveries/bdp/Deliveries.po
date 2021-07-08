@@ -1,0 +1,61 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(11) & _f(17) & warning.6,(_f(26) & _f(27) & _f(6) & _f(32) => _f(35));
+_f(1) & _f(2) & _f(11) & _f(17) & warning.5,(_f(26) & _f(27) & _f(6) & _f(30) => _f(34));
+_f(1) & _f(2) & _f(11) & _f(17) & warning.4,(_f(25) & _f(6) & _f(32) => _f(33));
+_f(1) & _f(2) & _f(11) & _f(17) & warning.3,(_f(25) & _f(6) & _f(30) => _f(31));
+_f(1) & _f(2) & _f(11) & _f(17) & warning.2,(_f(25) & _f(6) & _f(9) => _f(29));
+_f(1) & _f(2) & _f(11) & _f(17) & warning.1,(_f(25) & _f(6) & _f(7) => _f(28));
+_f(1) & _f(2) & _f(11) & _f(21) & endofday.2,(_f(24) & _f(22) & _f(6) & _f(9) => _f(10));
+_f(1) & _f(2) & _f(11) & _f(21) & endofday.1,(_f(24) & _f(22) & _f(6) & _f(7) => _f(8));
+_f(1) & _f(2) & _f(11) & _f(15) & drop.2,(_f(16) & _f(17) & _f(18) & _f(6) & _f(9) => _f(20));
+_f(1) & _f(2) & _f(11) & _f(15) & drop.1,(_f(16) & _f(17) & _f(18) & _f(6) & _f(7) => _f(19));
+_f(1) & _f(2) & _f(11) & _f(12) & load.2,(_f(6) & _f(9) => _f(14));
+_f(1) & _f(2) & _f(11) & _f(12) & load.1,(_f(6) & _f(7) => _f(13));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(4) & _f(5) & _f(6) & _f(9) => _f(10));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) => _f(8))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+ADDRESS: FIN(INTEGER) & not(ADDRESS = {}) & ITEM: FIN(INTEGER) & not(ITEM = {});
+aa : POW( ADDRESS);
+((aa) : (FIN(aa)));
+(card(aa) +1 <= 5);
+"Invariant is preserved";
+"Check invariant ((requests) : (((ITEM) +-> (ADDRESS))))";
+(({}) : (((ITEM) +-> (ADDRESS))));
+"Check invariant ((requests) : (FIN(requests)))";
+(({}) : (FIN({})));
+nogo : POW( ADDRESS) & ((nogo) : (FIN(nogo))) & ((requests) : (((ITEM) +-> (ADDRESS)))) & ((requests) : (FIN(requests)));
+((ii) : (ITEM)) & ((aa) : (ADDRESS)) & not(aa : nogo);
+((({((ii) |-> (aa))})) : (((ITEM) +-> (ADDRESS))));
+((({((ii) |-> (aa))})) : (FIN(({((ii) |-> (aa))}))));
+not(((card(requests)) = (0)));
+((ii) : (ITEM));
+((aa) : (ADDRESS));
+((((ii) |-> (aa))) : (requests));
+(((requests - ({((ii) |-> (aa))}))) : (((ITEM) +-> (ADDRESS))));
+(((requests - ({((ii) |-> (aa))}))) : (FIN((requests - ({((ii) |-> (aa))})))));
+((TRUE) = (TRUE));
+((oo) = (0));
+((oo) = (1));
+((oo) : (((0) .. (1))));
+((aa) : (nogo));
+not(aa : nogo);
+((card(((requests)~ )[({aa})])) = (0));
+((((requests) |>> (({aa})))) : (((ITEM) +-> (ADDRESS))));
+((((requests) |>> (({aa})))) : (FIN(((requests) |>> (({aa}))))));
+"Check invariant nogo : POW( ADDRESS)";
+(nogo - ({aa})) : POW( ADDRESS);
+"Check invariant ((nogo) : (FIN(nogo)))";
+(((nogo - ({aa}))) : (FIN((nogo - ({aa})))));
+((nogo) \/ (({aa}))) : POW( ADDRESS);
+((((nogo) \/ (({aa})))) : (FIN(((nogo) \/ (({aa}))))));
+ADDRESS: FIN(INTEGER) & not(ADDRESS = {});
+((requests) : (((ITEM) +-> (ADDRESS))));
+((nogo) : (FIN(nogo)));
+nogo : POW( ADDRESS)
+END
+&
+THEORY EnumerateX
+END

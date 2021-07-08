@@ -1,0 +1,271 @@
+<Machine name='Doors' type='abstraction'>
+<Sets>
+<Attr>
+<Pos l='7' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='DOOR' typref='1709653955'>
+<Attr>
+<Pos l='7' c='19' s='4'/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value='POSITION' typref='2741815774'>
+<Attr>
+<Pos l='7' c='25' s='8'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='open' typref='955270843'>
+<Attr>
+<Pos l='7' c='37' s='4'/>
+</Attr>
+</Id>
+<Id value='closed' typref='955270843'>
+<Attr>
+<Pos l='7' c='43' s='6'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Abstract_Variables>
+<Attr>
+<Pos l='9' c='1' s='18'/>
+</Attr>
+<Id value='position' typref='483395499'>
+<Attr>
+<Pos l='9' c='19' s='8'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='11' c='1' s='9'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='11' c='28' s='1'/>
+</Attr>
+<Id value='position' typref='483395499'>
+<Attr>
+<Pos l='11' c='19' s='8'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='2092253592'>
+<Attr>
+<Pos l='11' c='35' s='3'/>
+</Attr>
+<Id value='DOOR' typref='1709653955'>
+<Attr>
+<Pos l='11' c='30' s='4'/>
+</Attr>
+</Id>
+<Id value='POSITION' typref='2741815774'>
+<Attr>
+<Pos l='11' c='39' s='8'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='13' c='1' s='14'/>
+</Attr>
+<Assignement_Sub>
+<Attr>
+<Pos l='13' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='position' typref='483395499'>
+<Attr>
+<Pos l='13' c='19' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='483395499'>
+<Attr>
+<Pos l='13' c='36' s='1'/>
+</Attr>
+<Id value='DOOR' typref='1709653955'>
+<Attr>
+<Pos l='13' c='31' s='4'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='2741815774'>
+<Attr>
+<Pos l='13' c='38' s='1'/>
+</Attr>
+<Id value='closed' typref='955270843'>
+<Attr>
+<Pos l='13' c='39' s='6'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Initialisation>
+<Operations>
+<Operation name='opening'>
+<Attr>
+<Pos l='17' c='3' s='7' endLine='18'/>
+</Attr>
+<Input_Parameters>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='17' c='11' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='18' c='10' s='1'/>
+</Attr>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='18' c='7' s='2'/>
+</Attr>
+</Id>
+<Id value='DOOR' typref='1709653955'>
+<Attr>
+<Pos l='18' c='12' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='18' c='35' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='955270843'>
+<Attr>
+<Pos l='18' c='30' s='0'/>
+</Attr>
+<Id value='position' typref='483395499'>
+<Attr>
+<Pos l='18' c='22' s='8'/>
+</Attr>
+</Id>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='18' c='31' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='open' typref='955270843'>
+<Attr>
+<Pos l='18' c='38' s='4'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='closedoor'>
+<Attr>
+<Pos l='20' c='3' s='9' endLine='21'/>
+</Attr>
+<Input_Parameters>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='20' c='13' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='21' c='10' s='1'/>
+</Attr>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='21' c='7' s='2'/>
+</Attr>
+</Id>
+<Id value='DOOR' typref='1709653955'>
+<Attr>
+<Pos l='21' c='12' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='35' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='955270843'>
+<Attr>
+<Pos l='21' c='30' s='0'/>
+</Attr>
+<Id value='position' typref='483395499'>
+<Attr>
+<Pos l='21' c='22' s='8'/>
+</Attr>
+</Id>
+<Id value='dd' typref='1028334486'>
+<Attr>
+<Pos l='21' c='31' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='closed' typref='955270843'>
+<Attr>
+<Pos l='21' c='38' s='6'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='1709653955'>
+<Unary_Exp op='POW'>
+<Id value='DOOR'/>
+</Unary_Exp>
+</Type>
+<Type id='2741815774'>
+<Unary_Exp op='POW'>
+<Id value='POSITION'/>
+</Unary_Exp>
+</Type>
+<Type id='955270843'>
+<Id value='POSITION'/>
+</Type>
+<Type id='483395499'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='DOOR'/>
+<Id value='POSITION'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2092253592'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='DOOR'/>
+<Id value='POSITION'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1028334486'>
+<Id value='DOOR'/>
+</Type>
+</TypeInfos>
+
+</Machine>

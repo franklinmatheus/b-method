@@ -1,0 +1,4561 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext">
+<Attr>
+<Pos c="1" s="9" l="5"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="24" s="1" l="5"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:4:1:1," initialTag="list$1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2160064789" initialTag="seq(SHIP)" op="seq">
+<Attr>
+<Pos c="26" s="3" l="5"/>
+</Attr>
+<Id value="SHIP" typref="1400502263" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:4:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Attr>
+<Pos c="1" s="9" l="5"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="23" s="1" l="5"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:1," initialTag="fun$1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3306399872" initialTag="((SHIP) +-&gt; (QUAY))" op="+-&gt;">
+<Attr>
+<Pos c="31" s="3" l="5"/>
+</Attr>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Define>
+<Define name="mchcst"/>
+<Define name="aprp">
+<Attr>
+<Pos c="1" s="4" l="3"/>
+</Attr>
+<Set>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:1:2:1">
+<Attr>
+<Pos c="25" s="4" l="3"/>
+</Attr>
+</Id>
+</Set>
+</Define>
+<Define name="abs">
+<Attr>
+<Pos c="1" s="9" l="7"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((waiting) : (iseq(SHIP)))" op=":">
+<Attr>
+<Pos c="27" s="1" l="7"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:1:1">
+<Attr>
+<Pos c="19" s="7" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="1967978019" op="iseq">
+<Attr>
+<Pos c="29" s="4" l="7"/>
+</Attr>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:1:2:1">
+<Attr>
+<Pos c="34" s="4" l="7"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((docked) : (((QUAY) &gt;+&gt; (SHIP))))" op=":">
+<Attr>
+<Pos c="28" s="1" l="8"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:2:1">
+<Attr>
+<Pos c="21" s="6" l="8"/>
+</Attr>
+</Id>
+<Binary_Exp typref="590685971" op="&gt;+&gt;">
+<Attr>
+<Pos c="35" s="3" l="8"/>
+</Attr>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:2:2:1">
+<Attr>
+<Pos c="30" s="4" l="8"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:2:2:2">
+<Attr>
+<Pos c="39" s="4" l="8"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((((ran(waiting)) /\ (ran(docked)))) = ({}))" op="=">
+<Attr>
+<Pos c="74" s="1" l="8"/>
+</Attr>
+<Binary_Exp typref="2459522289" op="/\">
+<Attr>
+<Pos c="59" s="2" l="8"/>
+</Attr>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="46" s="3" l="8"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:3:1:1:1">
+<Attr>
+<Pos c="50" s="7" l="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="62" s="3" l="8"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:3:1:2:1">
+<Attr>
+<Pos c="66" s="6" l="8"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+<EmptySet typref="3817003670" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:3:1:3:2">
+<Attr>
+<Pos c="76" s="2" l="8"/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inv">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Proof_Obligation>
+<Comment>Inclusion dans un raffinement</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans un raffinement</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Set>
+<Id value="SHIP" typref="1400502263" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:2:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Set>
+</Nary_Pred>
+</Nary_Pred>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans un raffinement</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Set>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:2:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Set>
+<Set>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Set>
+</Nary_Pred>
+</Nary_Pred>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans un raffinement</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos c="1" s="14" l="7"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:5:1:1:1,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySeq typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</EmptySeq>
+</Values>
+</Simple_Assignement_Sub>
+<Attr>
+<Pos c="1" s="14" l="7"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:5:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref="3817003670" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+<Attr>
+<Pos c="1" s="14" l="12"/>
+</Attr>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:5:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value="0" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:5:1:2:1">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="5"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="24" s="1" l="5"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:4:1:1," initialTag="list$1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2160064789" initialTag="seq(SHIP)" op="seq">
+<Attr>
+<Pos c="26" s="3" l="5"/>
+</Attr>
+<Id value="SHIP" typref="1400502263" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:4:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Attr>
+<Pos c="1" s="9" l="5"/>
+</Attr>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="23" s="1" l="5"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:1," initialTag="fun$1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Binary_Exp typref="3306399872" initialTag="((SHIP) +-&gt; (QUAY))" op="+-&gt;">
+<Attr>
+<Pos c="31" s="3" l="5"/>
+</Attr>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:4:1:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos c="1" s="14" l="10"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:4:1:1:1:1">
+<Attr>
+<Pos c="19" s="7" l="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySeq typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:4:1:1:2:1">
+<Attr>
+<Pos c="19" s="7" l="10"/>
+</Attr>
+</EmptySeq>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:4:1:2:1:1">
+<Attr>
+<Pos c="36" s="6" l="10"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref="3817003670" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="36" s="6" l="10"/>
+</Attr>
+</EmptySet>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement / Precondition</Comment>
+<Tag>arrive</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="15"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="15"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="7" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="43" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:1">
+<Attr>
+<Pos c="40" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="46" s="3" l="15"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:2:1">
+<Attr>
+<Pos c="50" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="27" s="1" l="16"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos c="13" s="4" l="16"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:1:1">
+<Attr>
+<Pos c="18" s="7" l="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="MAXINT" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:2">
+<Attr>
+<Pos c="29" s="6" l="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Precondition can be deduced">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>arrive</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="15"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="15"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="7" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="43" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:1">
+<Attr>
+<Pos c="40" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="46" s="3" l="15"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:2:1">
+<Attr>
+<Pos c="50" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="27" s="1" l="16"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos c="13" s="4" l="16"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:1:1">
+<Attr>
+<Pos c="18" s="7" l="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="MAXINT" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:2">
+<Attr>
+<Pos c="29" s="6" l="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Operation_Call>
+<Attr>
+<Pos c="12" s="0" l="18"/>
+</Attr>
+<Name>
+<Id value="add" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="9" s="3" l="18"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:2:1">
+<Attr>
+<Pos c="13" s="2" l="18"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="add">
+<Attr>
+<Pos c="3" s="3" endLine="14" l="11"/>
+</Attr>
+<Input_Parameters>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="11"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="12"/>
+</Attr>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="1400502263" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:2:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="3146858350" op="&lt;-">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="2" l="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:2:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2701647786" op="+">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:2:2:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:2:2:1:2">
+<Attr>
+<Pos c="31" s="1" l="18"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:3:1:1:1">
+<Attr>
+<Pos c="8" s="7" l="17"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2596089270" op="&lt;-">
+<Attr>
+<Pos c="8" s="7" l="17"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:3:1:2:1:1">
+<Attr>
+<Pos c="19" s="7" l="17"/>
+</Attr>
+</Id>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:3:1:2:1:2">
+<Attr>
+<Pos c="30" s="2" l="17"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement / Precondition</Comment>
+<Tag>dock</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="15" s="2" l="21"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:1">
+<Attr>
+<Pos c="7" s="7" l="21"/>
+</Attr>
+</Id>
+<EmptySeq typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:2">
+<Attr>
+<Pos c="18" s="2" l="21"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="26" s="1" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:1">
+<Attr>
+<Pos c="23" s="2" l="21"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:2">
+<Attr>
+<Pos c="28" s="4" l="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="38" s="2" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:1">
+<Attr>
+<Pos c="35" s="2" l="21"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="41" s="3" l="21"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:2:1">
+<Attr>
+<Pos c="45" s="6" l="21"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Precondition can be deduced">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>dock</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="15" s="2" l="21"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:1">
+<Attr>
+<Pos c="7" s="7" l="21"/>
+</Attr>
+</Id>
+<EmptySeq typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:2">
+<Attr>
+<Pos c="18" s="2" l="21"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="26" s="1" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:1">
+<Attr>
+<Pos c="23" s="2" l="21"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:2">
+<Attr>
+<Pos c="28" s="4" l="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="38" s="2" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:1">
+<Attr>
+<Pos c="35" s="2" l="21"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="41" s="3" l="21"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:2:1">
+<Attr>
+<Pos c="45" s="6" l="21"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<ANY_Sub normalized="true">
+<Variables>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;"/>
+</Pred>
+<Then>
+<Nary_Sub op=";">
+<Operation_Call>
+<Attr>
+<Pos c="20" s="3" l="24"/>
+</Attr>
+<Name>
+<Id value="take" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="24"/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:2:1">
+<Attr>
+<Pos c="17" s="2" l="24"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Operation name="take">
+<Attr>
+<Pos c="1" s="2" endLine="19" l="16"/>
+</Attr>
+<Output_Parameters>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="1" s="2" l="16"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Precondition>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="12" s="2" l="17"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<EmptySeq typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="15" s="2" l="17"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3146858350" op="tail">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3972766348" op="first">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos c="36" s="0" l="24"/>
+</Attr>
+<Name>
+<Id value="insert" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="30" s="6" l="24"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:1">
+<Attr>
+<Pos c="37" s="2" l="24"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:2">
+<Attr>
+<Pos c="40" s="2" l="24"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="insert">
+<Attr>
+<Pos c="3" s="6" endLine="14" l="11"/>
+</Attr>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="12"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="7" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="25" s="1" l="12"/>
+</Attr>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="21" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="12" s="3" l="13"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="20" s="3" l="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:2:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2701647786" op="-">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:2:2:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Integer_Literal value="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:2:2:1:2">
+<Attr>
+<Pos c="26" s="1" l="26"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:1:1:1">
+<Attr>
+<Pos c="8" s="7" l="22"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="2596089270" op="tail">
+<Attr>
+<Pos c="8" s="7" l="22"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:1:2:1:1">
+<Attr>
+<Pos c="24" s="7" l="22"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:2:1:1:1">
+<Attr>
+<Pos c="36" s="6" l="22"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:2:1:1:1">
+<Attr>
+<Pos c="36" s="6" l="22"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:2:1:1:2">
+<Attr>
+<Pos c="43" s="2" l="22"/>
+</Attr>
+</Id>
+<Unary_Exp typref="973117672" op="first">
+<Attr>
+<Pos c="50" s="5" l="22"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:3:1:2:2:1:1">
+<Attr>
+<Pos c="56" s="7" l="22"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement / Precondition</Comment>
+<Tag>leave</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="26"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="26"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="24" s="3" l="26"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:2:1">
+<Attr>
+<Pos c="28" s="6" l="26"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:1:1">
+<Attr>
+<Pos c="1" s="2" l="25"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Precondition can be deduced">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>leave</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="26"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="26"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="24" s="3" l="26"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:2:1">
+<Attr>
+<Pos c="28" s="6" l="26"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:1:1">
+<Attr>
+<Pos c="1" s="2" l="25"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Operation_Call>
+<Attr>
+<Pos c="18" s="3" l="31"/>
+</Attr>
+<Name>
+<Id value="query" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="22" s="5" l="31"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:2:1">
+<Attr>
+<Pos c="28" s="2" l="31"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Output_Parameters>
+<Id value="qq" suffix="1" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:3:1,">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Operation name="query">
+<Attr>
+<Pos c="1" s="3" endLine="24" l="21"/>
+</Attr>
+<Output_Parameters>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="1" s="3" l="21"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="21"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="22"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="7" s="3" l="22"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3666687245" op="dom">
+<Attr>
+<Pos c="13" s="3" l="22"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:3:1:2:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="8" s="3" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1260513425" op="(">
+<Attr>
+<Pos c="8" s="3" l="23"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="23"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos c="39" s="0" l="31"/>
+</Attr>
+<Name>
+<Id value="remove" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="33" s="6" l="31"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:2:1">
+<Attr>
+<Pos c="40" s="2" l="31"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="remove">
+<Attr>
+<Pos c="3" s="6" endLine="19" l="16"/>
+</Attr>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="16"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="17"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="7" s="3" l="17"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:2:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:3:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2815505049" op="&lt;&lt;|">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+<Nary_Exp typref="3666687245" op="{">
+<Attr>
+<Pos c="15" s="1" l="18"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:3:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="16" s="3" l="18"/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:3:1:2:1:2,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:1:1:1">
+<Attr>
+<Pos c="8" s="6" l="27"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="2198280048" op="|&gt;&gt;">
+<Attr>
+<Pos c="8" s="6" l="27"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:1:2:1:1">
+<Attr>
+<Pos c="18" s="6" l="27"/>
+</Attr>
+</Id>
+<Nary_Exp typref="2459522289" op="{">
+<Attr>
+<Pos c="29" s="1" l="27"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:1:2:1:2:1">
+<Attr>
+<Pos c="30" s="2" l="27"/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:2:1:1">
+<Attr>
+<Pos c="37" s="2" l="27"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="826673864" op="(">
+<Attr>
+<Pos c="37" s="2" l="27"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="43" s="6" l="27"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:2:2:1:1:1">
+<Attr>
+<Pos c="43" s="6" l="27"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:4:1:2:2:1:2">
+<Attr>
+<Pos c="51" s="2" l="27"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:1:1">
+<Attr>
+<Pos c="1" s="2" l="25"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement / Precondition</Comment>
+<Tag>numberwaiting</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="nn" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:4:1:1">
+<Attr>
+<Pos c="1" s="2" l="30"/>
+</Attr>
+</Id>
+<Id value="nn" typref="2701647786" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Precondition can be deduced">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>numberwaiting</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="nn" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:4:1:1">
+<Attr>
+<Pos c="1" s="2" l="30"/>
+</Attr>
+</Id>
+<Id value="nn" typref="2701647786" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="nn" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:4:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:4:2:1:1:1,">
+<Attr>
+<Pos c="1" s="2" l="34"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:4:2:1:2:1,">
+<Attr>
+<Pos c="1" s="2" l="34"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="nn" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:4:2:1:1:1">
+<Attr>
+<Pos c="3" s="2" l="31"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="3" s="2" l="31"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:4:2:1:2:1:1">
+<Attr>
+<Pos c="14" s="7" l="31"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="nn" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:4:1:1">
+<Attr>
+<Pos c="1" s="2" l="30"/>
+</Attr>
+</Id>
+<Id value="nn" typref="2701647786" suffix="1">
+<Attr>
+<Pos c="1" s="2" l="34"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement / Precondition</Comment>
+<Tag>jumpqueue</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="42" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:1">
+<Attr>
+<Pos c="39" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="45" s="3" l="33"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:2:1">
+<Attr>
+<Pos c="49" s="7" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="63" s="1" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:1">
+<Attr>
+<Pos c="60" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:2">
+<Attr>
+<Pos c="65" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="75" s="2" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:1">
+<Attr>
+<Pos c="72" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="78" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:2:1">
+<Attr>
+<Pos c="82" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Precondition can be deduced">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>jumpqueue</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="42" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:1">
+<Attr>
+<Pos c="39" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="45" s="3" l="33"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:2:1">
+<Attr>
+<Pos c="49" s="7" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="63" s="1" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:1">
+<Attr>
+<Pos c="60" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:2">
+<Attr>
+<Pos c="65" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="75" s="2" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:1">
+<Attr>
+<Pos c="72" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="78" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:2:1">
+<Attr>
+<Pos c="82" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Operation_Call>
+<Attr>
+<Pos c="15" s="0" l="38"/>
+</Attr>
+<Name>
+<Id value="insert" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="9" s="6" l="38"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:2:1">
+<Attr>
+<Pos c="16" s="2" l="38"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:2:2">
+<Attr>
+<Pos c="19" s="2" l="38"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="insert">
+<Attr>
+<Pos c="3" s="6" endLine="14" l="11"/>
+</Attr>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="12"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="7" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="25" s="1" l="12"/>
+</Attr>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="21" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="12" s="3" l="13"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="20" s="3" l="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:3:1:1:1:1">
+<Attr>
+<Pos c="8" s="6" l="34"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:3:1:1:1:1">
+<Attr>
+<Pos c="8" s="6" l="34"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:3:1:1:1:2">
+<Attr>
+<Pos c="15" s="2" l="34"/>
+</Attr>
+</Id>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:3:1:2:1">
+<Attr>
+<Pos c="22" s="2" l="34"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos c="1" s="9" l="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="(((docked)~) = (fun$1))" op="=">
+<Attr>
+<Pos c="46" s="1" l="10"/>
+</Attr>
+<Unary_Exp typref="3285085104" op="~">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:1:1">
+<Attr>
+<Pos c="38" s="6" l="10"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="fun" suffix="1" typref="3285085104" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:4:2,">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((num$1) : (NAT))" op=":">
+<Attr>
+<Pos c="23" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Id value="NAT" typref="3603043417" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="25" s="3" l="9"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((num$1) = (size(waiting)))" op="=">
+<Attr>
+<Pos c="35" s="1" l="9"/>
+</Attr>
+<Id value="num" suffix="1" typref="2701647786" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:1,">
+<Attr>
+<Pos c="19" s="3" l="7"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2701647786" op="size">
+<Attr>
+<Pos c="37" s="4" l="9"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:2:2:1">
+<Attr>
+<Pos c="42" s="7" l="9"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((waiting) = (list$1))" op="=">
+<Attr>
+<Pos c="29" s="1" l="10"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="21" s="7" l="10"/>
+</Attr>
+</Id>
+<Id value="list" suffix="1" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:4:1:3:2,">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_Precondition_arrive</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_arrive</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="15"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="15"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="7" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="43" s="2" l="15"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:1">
+<Attr>
+<Pos c="40" s="2" l="15"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="46" s="3" l="15"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:3:2:1">
+<Attr>
+<Pos c="50" s="6" l="15"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Attr>
+<Pos c="27" s="1" l="16"/>
+</Attr>
+<Unary_Exp typref="2701647786" op="card">
+<Attr>
+<Pos c="13" s="4" l="16"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:1:1">
+<Attr>
+<Pos c="18" s="7" l="16"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Id value="MAXINT" typref="2701647786" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:1:2:1:4:2">
+<Attr>
+<Pos c="29" s="6" l="16"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:2:1">
+<Attr>
+<Pos c="13" s="2" l="18"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+<Sub_Calculus>
+<Operation_Call>
+<Attr>
+<Pos c="12" s="0" l="18"/>
+</Attr>
+<Name>
+<Id value="add" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="9" s="3" l="18"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:2:1">
+<Attr>
+<Pos c="13" s="2" l="18"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="add">
+<Attr>
+<Pos c="3" s="3" endLine="14" l="11"/>
+</Attr>
+<Input_Parameters>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="11"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="12"/>
+</Attr>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="1400502263" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:2:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="3146858350" op="&lt;-">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:1:3:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="2" l="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_Precondition_dock</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_dock</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="15" s="2" l="21"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:1">
+<Attr>
+<Pos c="7" s="7" l="21"/>
+</Attr>
+</Id>
+<EmptySeq typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:1:2">
+<Attr>
+<Pos c="18" s="2" l="21"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="26" s="1" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:1">
+<Attr>
+<Pos c="23" s="2" l="21"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:2:2">
+<Attr>
+<Pos c="28" s="4" l="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="38" s="2" l="21"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:1">
+<Attr>
+<Pos c="35" s="2" l="21"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="41" s="3" l="21"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:2:2:1:3:2:1">
+<Attr>
+<Pos c="45" s="6" l="21"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Quantified_Pred type="!">
+<Variables>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="1" s="2" l="16"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:2:1">
+<Attr>
+<Pos c="17" s="2" l="24"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<EmptySet/>
+</Exp_Comparison>
+</Unary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<EmptySet/>
+</Exp_Comparison>
+</Unary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+<Sub_Calculus>
+<Operation_Call>
+<Attr>
+<Pos c="20" s="3" l="24"/>
+</Attr>
+<Name>
+<Id value="take" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="24"/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:2:1">
+<Attr>
+<Pos c="17" s="2" l="24"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Operation name="take">
+<Attr>
+<Pos c="1" s="2" endLine="19" l="16"/>
+</Attr>
+<Output_Parameters>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="1" s="2" l="16"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Precondition>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="12" s="2" l="17"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<EmptySeq typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="15" s="2" l="17"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3146858350" op="tail">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3972766348" op="first">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:1">
+<Attr>
+<Pos c="37" s="2" l="24"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="qq" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:2">
+<Attr>
+<Pos c="40" s="2" l="24"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="12"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="7" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Binary_Pred>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Sub_Calculus>
+<ANY_Sub normalized="true">
+<Variables>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:1:1">
+<Attr>
+<Pos c="17" s="2" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;"/>
+</Pred>
+<Then>
+<Nary_Sub op=";">
+<Operation_Call>
+<Attr>
+<Pos c="20" s="3" l="24"/>
+</Attr>
+<Name>
+<Id value="take" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="24"/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:2:1">
+<Attr>
+<Pos c="17" s="2" l="24"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Operation name="take">
+<Attr>
+<Pos c="1" s="2" endLine="19" l="16"/>
+</Attr>
+<Output_Parameters>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="1" s="2" l="16"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Precondition>
+<Exp_Comparison op="/=">
+<Attr>
+<Pos c="12" s="2" l="17"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+<EmptySeq typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="15" s="2" l="17"/>
+</Attr>
+</EmptySeq>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3146858350" op="tail">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ee" typref="3972766348" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Unary_Exp typref="3972766348" op="first">
+<Attr>
+<Pos c="30" s="2" l="18"/>
+</Attr>
+<Id value="list" suffix="1" typref="3146858350" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:6:2:3:1:2:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:1:1:1">
+<Attr>
+<Pos c="19" s="4" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos c="36" s="0" l="24"/>
+</Attr>
+<Name>
+<Id value="insert" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="30" s="6" l="24"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="sh" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:1">
+<Attr>
+<Pos c="37" s="2" l="24"/>
+</Attr>
+</Id>
+<Id value="qq" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:2:2">
+<Attr>
+<Pos c="40" s="2" l="24"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Operation name="insert">
+<Attr>
+<Pos c="3" s="6" endLine="14" l="11"/>
+</Attr>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="12"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="7" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="25" s="1" l="12"/>
+</Attr>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="21" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="1848642184" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op="&lt;+">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Nary_Exp op="{">
+<Binary_Exp op="|-&gt;">
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="12" s="3" l="13"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:3:1:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:2:2:1:1:2:1:2:1:1">
+<Attr>
+<Pos c="20" s="3" l="13"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_Precondition_leave</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_leave</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="26"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="22" s="1" l="26"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="26"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="24" s="3" l="26"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:3:3:1:2:2:1">
+<Attr>
+<Pos c="28" s="6" l="26"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="21"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:2:1">
+<Attr>
+<Pos c="28" s="2" l="31"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="1" s="3" l="21"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="qq" suffix="1" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:3:1,">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Exp_Comparison op=":">
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="23"/>
+</Attr>
+</Id>
+<Unary_Exp op="dom">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Binary_Exp op="+-&gt;">
+<Unary_Exp op="dom">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+<Sub_Calculus>
+<Operation_Call>
+<Attr>
+<Pos c="18" s="3" l="31"/>
+</Attr>
+<Name>
+<Id value="query" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="22" s="5" l="31"/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:2:1">
+<Attr>
+<Pos c="28" s="2" l="31"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Output_Parameters>
+<Id value="qq" suffix="1" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:3:1,">
+<Attr>
+<Pos c="1" s="2" l="29"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Operation name="query">
+<Attr>
+<Pos c="1" s="3" endLine="24" l="21"/>
+</Attr>
+<Output_Parameters>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="1" s="3" l="21"/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:2:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="21"/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="22"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:3:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="7" s="3" l="22"/>
+</Attr>
+</Id>
+<Unary_Exp typref="3666687245" op="dom">
+<Attr>
+<Pos c="13" s="3" l="22"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:3:1:2:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="8" s="3" l="23"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp typref="1260513425" op="(">
+<Attr>
+<Pos c="8" s="3" l="23"/>
+</Attr>
+<Id value="fun" suffix="1" typref="2815505049" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:3:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:1,,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="3"/>
+</Attr>
+</Id>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:3:4:1:2:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:1:1:1">
+<Attr>
+<Pos c="19" s="3" l="23"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Body>
+</Operation>
+</Operation_Call>
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:2:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:1:1">
+<Attr>
+<Pos c="10" s="3" l="16"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:3:3:1:2:2:1">
+<Attr>
+<Pos c="40" s="2" l="31"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_Precondition_numberwaiting</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_numberwaiting</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_Precondition_jumpqueue</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans un raffinement</Comment>
+<Tag>WellDefinedness_jumpqueue</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="10" s="1" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:1">
+<Attr>
+<Pos c="7" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="2459522289" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:1:2">
+<Attr>
+<Pos c="12" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="22" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:1">
+<Attr>
+<Pos c="19" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="25" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:2:2:1">
+<Attr>
+<Pos c="29" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="42" s="2" l="33"/>
+</Attr>
+<Id value="ss" typref="973117672" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:1">
+<Attr>
+<Pos c="39" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2459522289" op="ran">
+<Attr>
+<Pos c="45" s="3" l="33"/>
+</Attr>
+<Id value="waiting" typref="2596089270" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:3:2:1">
+<Attr>
+<Pos c="49" s="7" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="63" s="1" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:1">
+<Attr>
+<Pos c="60" s="2" l="33"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:4:2">
+<Attr>
+<Pos c="65" s="4" l="33"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="/:">
+<Attr>
+<Pos c="75" s="2" l="33"/>
+</Attr>
+<Id value="qq" typref="826673864" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:1">
+<Attr>
+<Pos c="72" s="2" l="33"/>
+</Attr>
+</Id>
+<Unary_Exp typref="2604792593" op="dom">
+<Attr>
+<Pos c="78" s="3" l="33"/>
+</Attr>
+<Id value="docked" typref="2198280048" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:5:5:2:1:5:2:1">
+<Attr>
+<Pos c="82" s="6" l="33"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="ss" typref="973117672" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:2:1">
+<Attr>
+<Pos c="16" s="2" l="38"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="10" s="3" l="11"/>
+</Attr>
+</Id>
+<Id value="ss2" typref="1260513425" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:1:2,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="15" s="3" l="11"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="qq" typref="826673864" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:2:2">
+<Attr>
+<Pos c="19" s="2" l="38"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="11" s="1" l="12"/>
+</Attr>
+<Id value="ss1" typref="254197878" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="7" s="3" l="12"/>
+</Attr>
+</Id>
+<Id value="SHIP" typref="3666687245" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:6:1:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1,C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:6:5:2:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="2459522289">
+<Unary_Exp op="POW">
+<Id value="SHIP" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2604792593">
+<Unary_Exp op="POW">
+<Id value="QUAY" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:3:1"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:4:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2596089270">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:5:1:1:1"/>
+<Id value="SHIP" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:5:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3285085104">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="SHIP" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:6:1:1:1"/>
+<Id value="QUAY" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:6:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2198280048">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="QUAY" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:7:1:1:1"/>
+<Id value="SHIP" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:7:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="973117672">
+<Id value="SHIP" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:8:1"/>
+</Type>
+<Type id="826673864">
+<Id value="QUAY" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:7:9:1"/>
+</Type>
+<Type id="2459522289">
+<Unary_Exp op="POW">
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2604792593">
+<Unary_Exp op="POW">
+<Id value="QUAY" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:2:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2596089270">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:3:1:1:1"/>
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:3:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2198280048">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="QUAY" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:4:1:1:1"/>
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:4:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1967978019">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:5:1:1:1:1"/>
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:5:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="590685971">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="QUAY" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:6:1:1:1:1"/>
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:6:1:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="973117672">
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:8:1"/>
+</Type>
+<Type id="2701647786">
+<Id value="INTEGER" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:9:1"/>
+</Type>
+<Type id="826673864">
+<Id value="QUAY" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:10:1"/>
+</Type>
+<Type id="3285085104">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="SHIP" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:11:1:1:1"/>
+<Id value="QUAY" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Port.bxml:1:6:11:1:1:2"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1400502263">
+<Unary_Exp op="POW">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Type>
+<Type id="3146858350">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:2:1:1:1"/>
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:2:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2160064789">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="INTEGER" tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:3:1:1:1:1"/>
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:3:1:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3972766348">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:1:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:7:4:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\List.bxml:1:1:1">
+<Attr>
+<Pos c="24" s="4" l="5"/>
+</Attr>
+</Id>
+</Type>
+<Type id="3666687245">
+<Unary_Exp op="POW">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Type>
+<Type id="1848642184">
+<Unary_Exp op="POW">
+<Id value="QUAY" typref="2604792593" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:2:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Type>
+<Type id="2815505049">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:3:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:3:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3306399872">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:4:1:1:1:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+<Id value="QUAY" typref="2604792593" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:4:1:1:1:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="254197878">
+<Id value="SHIP" typref="2459522289" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:6:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:1">
+<Attr>
+<Pos c="35" s="4" l="5"/>
+</Attr>
+</Id>
+</Type>
+<Type id="1260513425">
+<Id value="QUAY" typref="2604792593" tag="C:\Users\Franklin\Desktop\Formal methods\Port\bdp\PortR.bxml:1:2:2:2:2,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:7:7:1,C:/Users/Franklin/Desktop/Formal methods/Port/bdp\Map.bxml:1:1:2">
+<Attr>
+<Pos c="41" s="4" l="5"/>
+</Attr>
+</Id>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

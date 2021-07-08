@@ -1,0 +1,309 @@
+<Machine name='Paperrr' type='abstraction'>
+<Abstract_Variables>
+<Attr>
+<Pos l='7' c='1' s='18'/>
+</Attr>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='7' c='11' s='6'/>
+</Attr>
+</Id>
+<Id value='magazines' typref='3603043417'>
+<Attr>
+<Pos l='7' c='19' s='9'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='9' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='9' c='18' s='2'/>
+</Attr>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='9' c='11' s='6'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='9' c='22' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='2701647786'>
+<Attr>
+<Pos l='9' c='21' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='163' typref='2701647786'>
+<Attr>
+<Pos l='9' c='24' s='3'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='9' c='40' s='2'/>
+</Attr>
+<Id value='magazines' typref='3603043417'>
+<Attr>
+<Pos l='9' c='30' s='9'/>
+</Attr>
+</Id>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='9' c='43' s='6'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;='>
+<Attr>
+<Pos l='9' c='65' s='2'/>
+</Attr>
+<Unary_Exp op='card' typref='2701647786'>
+<Attr>
+<Pos l='9' c='52' s='4'/>
+</Attr>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='9' c='57' s='6'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='60' typref='2701647786'>
+<Attr>
+<Pos l='9' c='68' s='2'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='11' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='11' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='11' c='16' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='11' c='26' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='11' c='41' s='2'/>
+</Attr>
+<Variables>
+<Id value='magazines' typref='3603043417'>
+<Attr>
+<Pos l='11' c='32' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'>
+<Attr>
+<Pos l='11' c='44' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='addpaper'>
+<Attr>
+<Pos l='14' c='5' s='8' endLine='17'/>
+</Attr>
+<Input_Parameters>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='14' c='14' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='15' c='16' s='1'/>
+</Attr>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='15' c='13' s='2'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='15' c='19' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='2701647786'>
+<Attr>
+<Pos l='15' c='18' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='163' typref='2701647786'>
+<Attr>
+<Pos l='15' c='21' s='3'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Attr>
+<Pos l='15' c='40' s='1'/>
+</Attr>
+<Unary_Exp op='card' typref='2701647786'>
+<Attr>
+<Pos l='15' c='27' s='4'/>
+</Attr>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='15' c='32' s='6'/>
+</Attr>
+</Id>
+</Unary_Exp>
+<Integer_Literal value='60' typref='2701647786'>
+<Attr>
+<Pos l='15' c='42' s='2'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='16' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='16' c='14' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3603043417'>
+<Attr>
+<Pos l='16' c='31' s='2'/>
+</Attr>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='16' c='24' s='6'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3603043417'>
+<Attr>
+<Pos l='16' c='34' s='1'/>
+</Attr>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='16' c='35' s='2'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='addmagazine'>
+<Attr>
+<Pos l='19' c='5' s='11' endLine='22'/>
+</Attr>
+<Input_Parameters>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='19' c='17' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='20' c='16' s='1'/>
+</Attr>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='20' c='13' s='2'/>
+</Attr>
+</Id>
+<Id value='papers' typref='3603043417'>
+<Attr>
+<Pos l='20' c='18' s='6'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='magazines' typref='3603043417'>
+<Attr>
+<Pos l='21' c='14' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='3603043417'>
+<Attr>
+<Pos l='21' c='37' s='2'/>
+</Attr>
+<Id value='magazines' typref='3603043417'>
+<Attr>
+<Pos l='21' c='27' s='9'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='3603043417'>
+<Attr>
+<Pos l='21' c='40' s='1'/>
+</Attr>
+<Id value='hh' typref='2701647786'>
+<Attr>
+<Pos l='21' c='41' s='2'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>
